@@ -1,0 +1,11 @@
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\bin\Debug\Seguradora_Pim.exe.config
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\bin\Debug\Seguradora_Pim.exe
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\bin\Debug\Seguradora_Pim.pdb
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.csproj.AssemblyReference.cache
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.csproj.SuggestedBindingRedirects.cache
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.Properties.Resources.resources
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.Tela_Opcoes_Funcionario.resources
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.csproj.GenerateResource.cache
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.exe
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.pdb
