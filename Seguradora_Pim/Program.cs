@@ -11,6 +11,7 @@ namespace Seguradora_Pim {
         /// </summary>
         [STAThread]
         static void Main() {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Tela_Opcoes_Funcionario());
