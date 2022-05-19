@@ -23,6 +23,11 @@ namespace Seguradora_Pim {
             }
         }
 
+        public Form Tela_Anterior {
+            get;
+            set;
+        }
+
         private void label1_Click(object sender, EventArgs e) {
 
         }
@@ -56,7 +61,15 @@ namespace Seguradora_Pim {
         }
 
         private void Botao_Cadastrar_Click(object sender, EventArgs e) {
-            Debug.WriteLine(Combobox_Genero.SelectedItem);
+            System.Windows.Forms.MessageBox.Show("Funcionário Cadastrado com Sucesso!");
+        }
+
+        private void Botao_Voltar_Click(object sender, EventArgs e) {
+            this.Close();
+            this.Tela_Anterior.Show();
+        }
+
+        private void Tela_Cadastro_Funcionario_Load(object sender, EventArgs e) {
 
         }
     }

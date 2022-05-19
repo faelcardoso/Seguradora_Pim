@@ -39,3 +39,4 @@ C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\bin\Debug\Syst
 C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\bin\Debug\System.ValueTuple.xml
 C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.csproj.CopyComplete
+C:\Users\Rafael\Desenvolvimento\PIM\Seguradora_Pim\Seguradora_Pim\obj\Debug\Seguradora_Pim.Tela_Pesquisar_Funcionario.resources

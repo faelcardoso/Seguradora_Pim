@@ -28,8 +28,9 @@
             this.Botao_Modificar_Funcionario = new System.Windows.Forms.Button();
             this.Botao_Deletar_Funcionario = new System.Windows.Forms.Button();
             this.Cabecalho = new System.Windows.Forms.Panel();
-            this.Container_Principal = new System.Windows.Forms.Panel();
             this.Titulo_Cabecalho = new System.Windows.Forms.Label();
+            this.Container_Principal = new System.Windows.Forms.Panel();
+            this.Titulo_Tela = new System.Windows.Forms.Label();
             this.Cabecalho.SuspendLayout();
             this.Container_Principal.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             this.Botao_Cadastrar_Funcionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Botao_Cadastrar_Funcionario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Botao_Cadastrar_Funcionario.ForeColor = System.Drawing.Color.White;
-            this.Botao_Cadastrar_Funcionario.Location = new System.Drawing.Point(318, 182);
+            this.Botao_Cadastrar_Funcionario.Location = new System.Drawing.Point(319, 163);
             this.Botao_Cadastrar_Funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 20);
             this.Botao_Cadastrar_Funcionario.Name = "Botao_Cadastrar_Funcionario";
             this.Botao_Cadastrar_Funcionario.Size = new System.Drawing.Size(533, 62);
@@ -62,7 +63,7 @@
             this.Botao_Informacoes_Funcionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Botao_Informacoes_Funcionario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Botao_Informacoes_Funcionario.ForeColor = System.Drawing.Color.White;
-            this.Botao_Informacoes_Funcionario.Location = new System.Drawing.Point(318, 267);
+            this.Botao_Informacoes_Funcionario.Location = new System.Drawing.Point(319, 248);
             this.Botao_Informacoes_Funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 20);
             this.Botao_Informacoes_Funcionario.Name = "Botao_Informacoes_Funcionario";
             this.Botao_Informacoes_Funcionario.Size = new System.Drawing.Size(533, 62);
@@ -80,7 +81,7 @@
             this.Botao_Modificar_Funcionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Botao_Modificar_Funcionario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Botao_Modificar_Funcionario.ForeColor = System.Drawing.Color.White;
-            this.Botao_Modificar_Funcionario.Location = new System.Drawing.Point(318, 352);
+            this.Botao_Modificar_Funcionario.Location = new System.Drawing.Point(319, 333);
             this.Botao_Modificar_Funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 20);
             this.Botao_Modificar_Funcionario.Name = "Botao_Modificar_Funcionario";
             this.Botao_Modificar_Funcionario.Size = new System.Drawing.Size(533, 62);
@@ -98,7 +99,7 @@
             this.Botao_Deletar_Funcionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Botao_Deletar_Funcionario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Botao_Deletar_Funcionario.ForeColor = System.Drawing.Color.White;
-            this.Botao_Deletar_Funcionario.Location = new System.Drawing.Point(318, 437);
+            this.Botao_Deletar_Funcionario.Location = new System.Drawing.Point(319, 418);
             this.Botao_Deletar_Funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 20);
             this.Botao_Deletar_Funcionario.Name = "Botao_Deletar_Funcionario";
             this.Botao_Deletar_Funcionario.Size = new System.Drawing.Size(533, 62);
@@ -113,27 +114,10 @@
             this.Cabecalho.Controls.Add(this.Titulo_Cabecalho);
             this.Cabecalho.Dock = System.Windows.Forms.DockStyle.Top;
             this.Cabecalho.Location = new System.Drawing.Point(0, 0);
-            this.Cabecalho.Margin = new System.Windows.Forms.Padding(0);
+            this.Cabecalho.Margin = new System.Windows.Forms.Padding(0, 0, 0, 48);
             this.Cabecalho.Name = "Cabecalho";
             this.Cabecalho.Size = new System.Drawing.Size(1171, 72);
             this.Cabecalho.TabIndex = 4;
-            // 
-            // Container_Principal
-            // 
-            this.Container_Principal.AutoSize = true;
-            this.Container_Principal.CausesValidation = false;
-            this.Container_Principal.Controls.Add(this.Cabecalho);
-            this.Container_Principal.Controls.Add(this.Botao_Deletar_Funcionario);
-            this.Container_Principal.Controls.Add(this.Botao_Modificar_Funcionario);
-            this.Container_Principal.Controls.Add(this.Botao_Informacoes_Funcionario);
-            this.Container_Principal.Controls.Add(this.Botao_Cadastrar_Funcionario);
-            this.Container_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container_Principal.Location = new System.Drawing.Point(0, 0);
-            this.Container_Principal.Margin = new System.Windows.Forms.Padding(4);
-            this.Container_Principal.Name = "Container_Principal";
-            this.Container_Principal.Size = new System.Drawing.Size(1171, 699);
-            this.Container_Principal.TabIndex = 1;
-            this.Container_Principal.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Titulo_Cabecalho
             // 
@@ -147,6 +131,38 @@
             this.Titulo_Cabecalho.Size = new System.Drawing.Size(307, 23);
             this.Titulo_Cabecalho.TabIndex = 0;
             this.Titulo_Cabecalho.Text = "Sistema de Gerenciamento de Apólices";
+            // 
+            // Container_Principal
+            // 
+            this.Container_Principal.AutoSize = true;
+            this.Container_Principal.CausesValidation = false;
+            this.Container_Principal.Controls.Add(this.Titulo_Tela);
+            this.Container_Principal.Controls.Add(this.Cabecalho);
+            this.Container_Principal.Controls.Add(this.Botao_Deletar_Funcionario);
+            this.Container_Principal.Controls.Add(this.Botao_Modificar_Funcionario);
+            this.Container_Principal.Controls.Add(this.Botao_Informacoes_Funcionario);
+            this.Container_Principal.Controls.Add(this.Botao_Cadastrar_Funcionario);
+            this.Container_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Container_Principal.Location = new System.Drawing.Point(0, 0);
+            this.Container_Principal.Margin = new System.Windows.Forms.Padding(4);
+            this.Container_Principal.Name = "Container_Principal";
+            this.Container_Principal.Size = new System.Drawing.Size(1171, 699);
+            this.Container_Principal.TabIndex = 1;
+            this.Container_Principal.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Titulo_Tela
+            // 
+            this.Titulo_Tela.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Titulo_Tela.AutoSize = true;
+            this.Titulo_Tela.BackColor = System.Drawing.Color.Transparent;
+            this.Titulo_Tela.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo_Tela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
+            this.Titulo_Tela.Location = new System.Drawing.Point(493, 120);
+            this.Titulo_Tela.Margin = new System.Windows.Forms.Padding(72, 0, 0, 16);
+            this.Titulo_Tela.Name = "Titulo_Tela";
+            this.Titulo_Tela.Size = new System.Drawing.Size(185, 23);
+            this.Titulo_Tela.TabIndex = 5;
+            this.Titulo_Tela.Text = "Opções de Funcionário";
             // 
             // Tela_Opcoes_Funcionario
             // 
@@ -162,6 +178,7 @@
             this.Cabecalho.ResumeLayout(false);
             this.Cabecalho.PerformLayout();
             this.Container_Principal.ResumeLayout(false);
+            this.Container_Principal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +193,7 @@
         private System.Windows.Forms.Panel Cabecalho;
         private System.Windows.Forms.Panel Container_Principal;
         private System.Windows.Forms.Label Titulo_Cabecalho;
+        private System.Windows.Forms.Label Titulo_Tela;
     }
 }
 
