@@ -33,22 +33,21 @@
             this.DTPicker_Data_Nascimento = new System.Windows.Forms.DateTimePicker();
             this.Group_Cpf_Cnpj = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cpf_Cnpj = new System.Windows.Forms.Label();
-            this.Textbox_Cpf = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.Group_Cnh = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cnh = new System.Windows.Forms.Label();
-            this.Textbox_Cnh = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Cnh = new System.Windows.Forms.MaskedTextBox();
             this.Group_Genero = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Genero = new System.Windows.Forms.Label();
             this.Combobox_Genero = new System.Windows.Forms.ComboBox();
             this.Group_Cep = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cep = new System.Windows.Forms.Label();
-            this.Textbox_Cep = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Cep = new System.Windows.Forms.MaskedTextBox();
             this.Group_Cidade = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cidade = new System.Windows.Forms.Label();
             this.Textbox_Cidade = new System.Windows.Forms.TextBox();
             this.Group_Estado = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Estado = new System.Windows.Forms.Label();
-            this.Textbox_Estado = new System.Windows.Forms.TextBox();
             this.Group_Bairro = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Bairro = new System.Windows.Forms.Label();
             this.Textbox_Bairro = new System.Windows.Forms.TextBox();
@@ -57,13 +56,13 @@
             this.Textbox_Rua = new System.Windows.Forms.TextBox();
             this.Group_Numero = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Numero = new System.Windows.Forms.Label();
-            this.Textbox_Numero = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Numero = new System.Windows.Forms.MaskedTextBox();
             this.Group_Complemento = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Complemento = new System.Windows.Forms.Label();
             this.Textbox_Complemento = new System.Windows.Forms.TextBox();
             this.Group_Celular = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Celular = new System.Windows.Forms.Label();
-            this.Textbox_Celular = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Celular = new System.Windows.Forms.MaskedTextBox();
             this.Group_Email = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Email = new System.Windows.Forms.Label();
             this.Textbox_Email = new System.Windows.Forms.TextBox();
@@ -72,6 +71,7 @@
             this.Titulo_Tela = new System.Windows.Forms.Label();
             this.Cabecalho = new System.Windows.Forms.Panel();
             this.Titulo_Cabecalho = new System.Windows.Forms.Label();
+            this.MaskedTextBox_Estado = new System.Windows.Forms.MaskedTextBox();
             this.Container_Principal.SuspendLayout();
             this.Formulario.SuspendLayout();
             this.Group_Nome.SuspendLayout();
@@ -201,7 +201,7 @@
             // Group_Cpf_Cnpj
             // 
             this.Group_Cpf_Cnpj.Controls.Add(this.Label_Cpf_Cnpj);
-            this.Group_Cpf_Cnpj.Controls.Add(this.Textbox_Cpf);
+            this.Group_Cpf_Cnpj.Controls.Add(this.MaskedTextBox_Cpf);
             this.Group_Cpf_Cnpj.Location = new System.Drawing.Point(1042, 0);
             this.Group_Cpf_Cnpj.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cpf_Cnpj.Name = "Group_Cpf_Cnpj";
@@ -220,19 +220,21 @@
             this.Label_Cpf_Cnpj.Text = "CPF/CNPJ*";
             this.Label_Cpf_Cnpj.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Cpf
+            // MaskedTextBox_Cpf
             // 
-            this.Textbox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Cpf.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Cpf.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Cpf.Name = "Textbox_Cpf";
-            this.Textbox_Cpf.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Cpf.TabIndex = 3;
+            this.MaskedTextBox_Cpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.MaskedTextBox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cpf.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Cpf.Mask = "000.000.000-00";
+            this.MaskedTextBox_Cpf.Name = "MaskedTextBox_Cpf";
+            this.MaskedTextBox_Cpf.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Cpf.TabIndex = 3;
+            this.MaskedTextBox_Cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // Group_Cnh
             // 
             this.Group_Cnh.Controls.Add(this.Label_Cnh);
-            this.Group_Cnh.Controls.Add(this.Textbox_Cnh);
+            this.Group_Cnh.Controls.Add(this.MaskedTextBox_Cnh);
             this.Group_Cnh.Location = new System.Drawing.Point(8, 84);
             this.Group_Cnh.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cnh.Name = "Group_Cnh";
@@ -251,14 +253,14 @@
             this.Label_Cnh.Text = "CNH*";
             this.Label_Cnh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Cnh
+            // MaskedTextBox_Cnh
             // 
-            this.Textbox_Cnh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Cnh.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Cnh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Cnh.Name = "Textbox_Cnh";
-            this.Textbox_Cnh.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Cnh.TabIndex = 1;
+            this.MaskedTextBox_Cnh.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cnh.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Cnh.Mask = "00000000000";
+            this.MaskedTextBox_Cnh.Name = "MaskedTextBox_Cnh";
+            this.MaskedTextBox_Cnh.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Cnh.TabIndex = 1;
             // 
             // Group_Genero
             // 
@@ -297,7 +299,7 @@
             // Group_Cep
             // 
             this.Group_Cep.Controls.Add(this.Label_Cep);
-            this.Group_Cep.Controls.Add(this.Textbox_Cep);
+            this.Group_Cep.Controls.Add(this.MaskedTextBox_Cep);
             this.Group_Cep.Location = new System.Drawing.Point(1042, 84);
             this.Group_Cep.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cep.Name = "Group_Cep";
@@ -316,14 +318,14 @@
             this.Label_Cep.Text = "CEP*";
             this.Label_Cep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Cep
+            // MaskedTextBox_Cep
             // 
-            this.Textbox_Cep.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Cep.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Cep.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Cep.Name = "Textbox_Cep";
-            this.Textbox_Cep.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Cep.TabIndex = 1;
+            this.MaskedTextBox_Cep.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cep.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Cep.Mask = "00000-000";
+            this.MaskedTextBox_Cep.Name = "MaskedTextBox_Cep";
+            this.MaskedTextBox_Cep.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Cep.TabIndex = 1;
             // 
             // Group_Cidade
             // 
@@ -359,7 +361,7 @@
             // Group_Estado
             // 
             this.Group_Estado.Controls.Add(this.Label_Estado);
-            this.Group_Estado.Controls.Add(this.Textbox_Estado);
+            this.Group_Estado.Controls.Add(this.MaskedTextBox_Estado);
             this.Group_Estado.Location = new System.Drawing.Point(525, 168);
             this.Group_Estado.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Estado.Name = "Group_Estado";
@@ -377,15 +379,6 @@
             this.Label_Estado.TabIndex = 0;
             this.Label_Estado.Text = "Estado*";
             this.Label_Estado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Textbox_Estado
-            // 
-            this.Textbox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Estado.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Estado.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Estado.Name = "Textbox_Estado";
-            this.Textbox_Estado.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Estado.TabIndex = 1;
             // 
             // Group_Bairro
             // 
@@ -452,7 +445,7 @@
             // Group_Numero
             // 
             this.Group_Numero.Controls.Add(this.Label_Numero);
-            this.Group_Numero.Controls.Add(this.Textbox_Numero);
+            this.Group_Numero.Controls.Add(this.MaskedTextBox_Numero);
             this.Group_Numero.Location = new System.Drawing.Point(525, 252);
             this.Group_Numero.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Numero.Name = "Group_Numero";
@@ -471,14 +464,14 @@
             this.Label_Numero.Text = "Número*";
             this.Label_Numero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Numero
+            // MaskedTextBox_Numero
             // 
-            this.Textbox_Numero.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Numero.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Numero.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Numero.Name = "Textbox_Numero";
-            this.Textbox_Numero.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Numero.TabIndex = 1;
+            this.MaskedTextBox_Numero.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Numero.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Numero.Mask = "00000";
+            this.MaskedTextBox_Numero.Name = "MaskedTextBox_Numero";
+            this.MaskedTextBox_Numero.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Numero.TabIndex = 2;
             // 
             // Group_Complemento
             // 
@@ -514,7 +507,7 @@
             // Group_Celular
             // 
             this.Group_Celular.Controls.Add(this.Label_Celular);
-            this.Group_Celular.Controls.Add(this.Textbox_Celular);
+            this.Group_Celular.Controls.Add(this.MaskedTextBox_Celular);
             this.Group_Celular.Location = new System.Drawing.Point(8, 336);
             this.Group_Celular.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Celular.Name = "Group_Celular";
@@ -533,14 +526,14 @@
             this.Label_Celular.Text = "Celular*";
             this.Label_Celular.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Celular
+            // MaskedTextBox_Celular
             // 
-            this.Textbox_Celular.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Celular.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Celular.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Celular.Name = "Textbox_Celular";
-            this.Textbox_Celular.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Celular.TabIndex = 1;
+            this.MaskedTextBox_Celular.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Celular.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Celular.Mask = "(00) 00000-0000";
+            this.MaskedTextBox_Celular.Name = "MaskedTextBox_Celular";
+            this.MaskedTextBox_Celular.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Celular.TabIndex = 1;
             // 
             // Group_Email
             // 
@@ -607,7 +600,7 @@
             this.Botao_Cadastrar.Name = "Botao_Cadastrar";
             this.Botao_Cadastrar.Size = new System.Drawing.Size(200, 48);
             this.Botao_Cadastrar.TabIndex = 11;
-            this.Botao_Cadastrar.Text = "Cadastrar";
+            this.Botao_Cadastrar.Text = "Modificar";
             this.Botao_Cadastrar.UseVisualStyleBackColor = false;
             // 
             // Titulo_Tela
@@ -649,6 +642,15 @@
             this.Titulo_Cabecalho.TabIndex = 1;
             this.Titulo_Cabecalho.Text = "Sistema de Gerenciamento de Apólices";
             // 
+            // MaskedTextBox_Estado
+            // 
+            this.MaskedTextBox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Estado.Mask = "AA";
+            this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
+            this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Estado.TabIndex = 2;
+            // 
             // Tela_Modificar_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -657,6 +659,7 @@
             this.Controls.Add(this.Container_Principal);
             this.Name = "Tela_Modificar_Funcionario";
             this.Text = "Tela_Modificar_Funcionario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Tela_Modificar_Funcionario_Load);
             this.Container_Principal.ResumeLayout(false);
             this.Container_Principal.PerformLayout();
@@ -708,22 +711,18 @@
         private System.Windows.Forms.DateTimePicker DTPicker_Data_Nascimento;
         private System.Windows.Forms.FlowLayoutPanel Group_Cpf_Cnpj;
         private System.Windows.Forms.Label Label_Cpf_Cnpj;
-        private System.Windows.Forms.TextBox Textbox_Cpf;
         private System.Windows.Forms.FlowLayoutPanel Group_Cnh;
         private System.Windows.Forms.Label Label_Cnh;
-        private System.Windows.Forms.TextBox Textbox_Cnh;
         private System.Windows.Forms.FlowLayoutPanel Group_Genero;
         private System.Windows.Forms.Label Label_Genero;
         private System.Windows.Forms.ComboBox Combobox_Genero;
         private System.Windows.Forms.FlowLayoutPanel Group_Cep;
         private System.Windows.Forms.Label Label_Cep;
-        private System.Windows.Forms.TextBox Textbox_Cep;
         private System.Windows.Forms.FlowLayoutPanel Group_Cidade;
         private System.Windows.Forms.Label Label_Cidade;
         private System.Windows.Forms.TextBox Textbox_Cidade;
         private System.Windows.Forms.FlowLayoutPanel Group_Estado;
         private System.Windows.Forms.Label Label_Estado;
-        private System.Windows.Forms.TextBox Textbox_Estado;
         private System.Windows.Forms.FlowLayoutPanel Group_Bairro;
         private System.Windows.Forms.Label Label_Bairro;
         private System.Windows.Forms.TextBox Textbox_Bairro;
@@ -732,13 +731,11 @@
         private System.Windows.Forms.TextBox Textbox_Rua;
         private System.Windows.Forms.FlowLayoutPanel Group_Numero;
         private System.Windows.Forms.Label Label_Numero;
-        private System.Windows.Forms.TextBox Textbox_Numero;
         private System.Windows.Forms.FlowLayoutPanel Group_Complemento;
         private System.Windows.Forms.Label Label_Complemento;
         private System.Windows.Forms.TextBox Textbox_Complemento;
         private System.Windows.Forms.FlowLayoutPanel Group_Celular;
         private System.Windows.Forms.Label Label_Celular;
-        private System.Windows.Forms.TextBox Textbox_Celular;
         private System.Windows.Forms.FlowLayoutPanel Group_Email;
         private System.Windows.Forms.Label Label_Email;
         private System.Windows.Forms.TextBox Textbox_Email;
@@ -747,5 +744,11 @@
         private System.Windows.Forms.Label Titulo_Tela;
         private System.Windows.Forms.Panel Cabecalho;
         private System.Windows.Forms.Label Titulo_Cabecalho;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Cpf;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Cnh;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Cep;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Celular;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Estado;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Numero;
     }
 }

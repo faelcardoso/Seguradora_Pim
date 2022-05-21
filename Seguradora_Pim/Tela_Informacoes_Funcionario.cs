@@ -39,6 +39,7 @@ namespace Seguradora_Pim {
                     i++;
                 }
             }
+            //Adicionando linhas
             DataGrid_Info_Funcionario.Rows.Add(linha_data_grid);
         }
 

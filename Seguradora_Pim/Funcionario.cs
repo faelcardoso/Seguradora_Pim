@@ -17,22 +17,22 @@ namespace Seguradora_Pim {
             string str_cmd_listar_funcionario =
             "SELECT " +
             "id," +
-            "nome, " +
-            "cpf_cnpj, " +
-            "cnh, " +
-            "genero, " +
-            "data_nascimento, " +
-            "cep, " +
-            "estado, " +
-            "cidade, " +
-            "bairro, " +
-            "rua, " +
-            "numero, " +
-            "complemento, " +
-            "celular, " +
+            "nome," +
+            "cpf_cnpj," +
+            "cnh," +
+            "genero," +
+            "data_nascimento," +
+            "cep," +
+            "estado," +
+            "cidade," +
+            "bairro," +
+            "rua," +
+            "numero," +
+            "complemento," +
+            "celular," +
             "email " +
             "FROM tb_pessoa WHERE cpf_cnpj = @Cpf";
-
+            Debug.WriteLine(str_cmd_listar_funcionario);
             string str_conn = "Host=localhost;Username=postgres;Password=postgres;Database=db_seguradora";
             //Conectando
             NpgsqlConnection conn = new NpgsqlConnection(str_conn);

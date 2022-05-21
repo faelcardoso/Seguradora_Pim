@@ -33,22 +33,21 @@
             this.DTPicker_Data_Nascimento = new System.Windows.Forms.DateTimePicker();
             this.Group_Cpf_Cnpj = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cpf_Cnpj = new System.Windows.Forms.Label();
-            this.Textbox_Cpf = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.Group_Cnh = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cnh = new System.Windows.Forms.Label();
-            this.Textbox_Cnh = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Cnh = new System.Windows.Forms.MaskedTextBox();
             this.Group_Genero = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Genero = new System.Windows.Forms.Label();
             this.Combobox_Genero = new System.Windows.Forms.ComboBox();
             this.Group_Cep = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cep = new System.Windows.Forms.Label();
-            this.Textbox_Cep = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Cep = new System.Windows.Forms.MaskedTextBox();
             this.Group_Cidade = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Cidade = new System.Windows.Forms.Label();
             this.Textbox_Cidade = new System.Windows.Forms.TextBox();
             this.Group_Estado = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Estado = new System.Windows.Forms.Label();
-            this.Textbox_Estado = new System.Windows.Forms.TextBox();
             this.Group_Bairro = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Bairro = new System.Windows.Forms.Label();
             this.Textbox_Bairro = new System.Windows.Forms.TextBox();
@@ -57,27 +56,28 @@
             this.Textbox_Rua = new System.Windows.Forms.TextBox();
             this.Group_Numero = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Numero = new System.Windows.Forms.Label();
-            this.Textbox_Numero = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Numero = new System.Windows.Forms.MaskedTextBox();
             this.Group_Complemento = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Complemento = new System.Windows.Forms.Label();
             this.Textbox_Complemento = new System.Windows.Forms.TextBox();
             this.Group_Celular = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Celular = new System.Windows.Forms.Label();
-            this.Textbox_Celular = new System.Windows.Forms.TextBox();
+            this.MaskedTextBox_Celular = new System.Windows.Forms.MaskedTextBox();
             this.Group_Email = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Email = new System.Windows.Forms.Label();
             this.Textbox_Email = new System.Windows.Forms.TextBox();
-            this.Botao_Voltar = new System.Windows.Forms.Button();
-            this.Botao_Cadastrar = new System.Windows.Forms.Button();
-            this.Titulo_Tela = new System.Windows.Forms.Label();
-            this.Cabecalho = new System.Windows.Forms.Panel();
-            this.Titulo_Cabecalho = new System.Windows.Forms.Label();
             this.Group_Senha = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Senha = new System.Windows.Forms.Label();
             this.MaskedTextBox_Senha = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.MaskedTextBox_Confirmar_Senha = new System.Windows.Forms.MaskedTextBox();
+            this.Botao_Voltar = new System.Windows.Forms.Button();
+            this.Botao_Cadastrar = new System.Windows.Forms.Button();
+            this.Titulo_Tela = new System.Windows.Forms.Label();
+            this.Cabecalho = new System.Windows.Forms.Panel();
+            this.Titulo_Cabecalho = new System.Windows.Forms.Label();
+            this.MaskedTextBox_Estado = new System.Windows.Forms.MaskedTextBox();
             this.Container_Principal.SuspendLayout();
             this.Formulario.SuspendLayout();
             this.Group_Nome.SuspendLayout();
@@ -94,9 +94,9 @@
             this.Group_Complemento.SuspendLayout();
             this.Group_Celular.SuspendLayout();
             this.Group_Email.SuspendLayout();
-            this.Cabecalho.SuspendLayout();
             this.Group_Senha.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.Cabecalho.SuspendLayout();
             this.SuspendLayout();
             // 
             // Container_Principal
@@ -213,7 +213,7 @@
             // Group_Cpf_Cnpj
             // 
             this.Group_Cpf_Cnpj.Controls.Add(this.Label_Cpf_Cnpj);
-            this.Group_Cpf_Cnpj.Controls.Add(this.Textbox_Cpf);
+            this.Group_Cpf_Cnpj.Controls.Add(this.MaskedTextBox_Cpf);
             this.Group_Cpf_Cnpj.Location = new System.Drawing.Point(1042, 0);
             this.Group_Cpf_Cnpj.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cpf_Cnpj.Name = "Group_Cpf_Cnpj";
@@ -232,19 +232,21 @@
             this.Label_Cpf_Cnpj.Text = "CPF/CNPJ*";
             this.Label_Cpf_Cnpj.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Cpf
+            // MaskedTextBox_Cpf
             // 
-            this.Textbox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Cpf.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Cpf.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Cpf.Name = "Textbox_Cpf";
-            this.Textbox_Cpf.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Cpf.TabIndex = 3;
+            this.MaskedTextBox_Cpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.MaskedTextBox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cpf.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Cpf.Mask = "000.000.000-00";
+            this.MaskedTextBox_Cpf.Name = "MaskedTextBox_Cpf";
+            this.MaskedTextBox_Cpf.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Cpf.TabIndex = 4;
+            this.MaskedTextBox_Cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // Group_Cnh
             // 
             this.Group_Cnh.Controls.Add(this.Label_Cnh);
-            this.Group_Cnh.Controls.Add(this.Textbox_Cnh);
+            this.Group_Cnh.Controls.Add(this.MaskedTextBox_Cnh);
             this.Group_Cnh.Location = new System.Drawing.Point(8, 84);
             this.Group_Cnh.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cnh.Name = "Group_Cnh";
@@ -263,14 +265,14 @@
             this.Label_Cnh.Text = "CNH*";
             this.Label_Cnh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Cnh
+            // MaskedTextBox_Cnh
             // 
-            this.Textbox_Cnh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Cnh.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Cnh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Cnh.Name = "Textbox_Cnh";
-            this.Textbox_Cnh.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Cnh.TabIndex = 1;
+            this.MaskedTextBox_Cnh.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cnh.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Cnh.Mask = "00000000000";
+            this.MaskedTextBox_Cnh.Name = "MaskedTextBox_Cnh";
+            this.MaskedTextBox_Cnh.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Cnh.TabIndex = 2;
             // 
             // Group_Genero
             // 
@@ -309,7 +311,7 @@
             // Group_Cep
             // 
             this.Group_Cep.Controls.Add(this.Label_Cep);
-            this.Group_Cep.Controls.Add(this.Textbox_Cep);
+            this.Group_Cep.Controls.Add(this.MaskedTextBox_Cep);
             this.Group_Cep.Location = new System.Drawing.Point(1042, 84);
             this.Group_Cep.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cep.Name = "Group_Cep";
@@ -328,14 +330,14 @@
             this.Label_Cep.Text = "CEP*";
             this.Label_Cep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Cep
+            // MaskedTextBox_Cep
             // 
-            this.Textbox_Cep.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Cep.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Cep.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Cep.Name = "Textbox_Cep";
-            this.Textbox_Cep.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Cep.TabIndex = 1;
+            this.MaskedTextBox_Cep.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cep.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Cep.Mask = "00000-000";
+            this.MaskedTextBox_Cep.Name = "MaskedTextBox_Cep";
+            this.MaskedTextBox_Cep.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Cep.TabIndex = 2;
             // 
             // Group_Cidade
             // 
@@ -371,7 +373,7 @@
             // Group_Estado
             // 
             this.Group_Estado.Controls.Add(this.Label_Estado);
-            this.Group_Estado.Controls.Add(this.Textbox_Estado);
+            this.Group_Estado.Controls.Add(this.MaskedTextBox_Estado);
             this.Group_Estado.Location = new System.Drawing.Point(525, 168);
             this.Group_Estado.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Estado.Name = "Group_Estado";
@@ -389,15 +391,6 @@
             this.Label_Estado.TabIndex = 0;
             this.Label_Estado.Text = "Estado*";
             this.Label_Estado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Textbox_Estado
-            // 
-            this.Textbox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Estado.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Estado.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Estado.Name = "Textbox_Estado";
-            this.Textbox_Estado.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Estado.TabIndex = 1;
             // 
             // Group_Bairro
             // 
@@ -464,7 +457,7 @@
             // Group_Numero
             // 
             this.Group_Numero.Controls.Add(this.Label_Numero);
-            this.Group_Numero.Controls.Add(this.Textbox_Numero);
+            this.Group_Numero.Controls.Add(this.MaskedTextBox_Numero);
             this.Group_Numero.Location = new System.Drawing.Point(525, 252);
             this.Group_Numero.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Numero.Name = "Group_Numero";
@@ -483,14 +476,14 @@
             this.Label_Numero.Text = "Número*";
             this.Label_Numero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Numero
+            // MaskedTextBox_Numero
             // 
-            this.Textbox_Numero.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Numero.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Numero.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Numero.Name = "Textbox_Numero";
-            this.Textbox_Numero.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Numero.TabIndex = 1;
+            this.MaskedTextBox_Numero.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Numero.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Numero.Mask = "00000";
+            this.MaskedTextBox_Numero.Name = "MaskedTextBox_Numero";
+            this.MaskedTextBox_Numero.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Numero.TabIndex = 3;
             // 
             // Group_Complemento
             // 
@@ -526,7 +519,7 @@
             // Group_Celular
             // 
             this.Group_Celular.Controls.Add(this.Label_Celular);
-            this.Group_Celular.Controls.Add(this.Textbox_Celular);
+            this.Group_Celular.Controls.Add(this.MaskedTextBox_Celular);
             this.Group_Celular.Location = new System.Drawing.Point(8, 336);
             this.Group_Celular.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Celular.Name = "Group_Celular";
@@ -545,14 +538,14 @@
             this.Label_Celular.Text = "Celular*";
             this.Label_Celular.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Textbox_Celular
+            // MaskedTextBox_Celular
             // 
-            this.Textbox_Celular.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Celular.Location = new System.Drawing.Point(0, 31);
-            this.Textbox_Celular.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.Textbox_Celular.Name = "Textbox_Celular";
-            this.Textbox_Celular.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Celular.TabIndex = 1;
+            this.MaskedTextBox_Celular.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Celular.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Celular.Mask = "(00) 00000-0000";
+            this.MaskedTextBox_Celular.Name = "MaskedTextBox_Celular";
+            this.MaskedTextBox_Celular.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Celular.TabIndex = 2;
             // 
             // Group_Email
             // 
@@ -584,6 +577,71 @@
             this.Textbox_Email.Name = "Textbox_Email";
             this.Textbox_Email.Size = new System.Drawing.Size(500, 30);
             this.Textbox_Email.TabIndex = 1;
+            // 
+            // Group_Senha
+            // 
+            this.Group_Senha.Controls.Add(this.Label_Senha);
+            this.Group_Senha.Controls.Add(this.MaskedTextBox_Senha);
+            this.Group_Senha.Location = new System.Drawing.Point(1042, 336);
+            this.Group_Senha.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.Group_Senha.Name = "Group_Senha";
+            this.Group_Senha.Size = new System.Drawing.Size(509, 84);
+            this.Group_Senha.TabIndex = 20;
+            // 
+            // Label_Senha
+            // 
+            this.Label_Senha.AutoSize = true;
+            this.Label_Senha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Senha.Location = new System.Drawing.Point(0, 0);
+            this.Label_Senha.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.Label_Senha.Name = "Label_Senha";
+            this.Label_Senha.Size = new System.Drawing.Size(180, 23);
+            this.Label_Senha.TabIndex = 0;
+            this.Label_Senha.Text = "Senha do funcionário*";
+            this.Label_Senha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Label_Senha.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // MaskedTextBox_Senha
+            // 
+            this.MaskedTextBox_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Senha.Location = new System.Drawing.Point(0, 31);
+            this.MaskedTextBox_Senha.Margin = new System.Windows.Forms.Padding(0);
+            this.MaskedTextBox_Senha.Name = "MaskedTextBox_Senha";
+            this.MaskedTextBox_Senha.Size = new System.Drawing.Size(500, 28);
+            this.MaskedTextBox_Senha.TabIndex = 1;
+            this.MaskedTextBox_Senha.UseSystemPasswordChar = true;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.label1);
+            this.flowLayoutPanel2.Controls.Add(this.MaskedTextBox_Confirmar_Senha);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(8, 420);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(509, 84);
+            this.flowLayoutPanel2.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Confirmar Senha*";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // MaskedTextBox_Confirmar_Senha
+            // 
+            this.MaskedTextBox_Confirmar_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Confirmar_Senha.Location = new System.Drawing.Point(0, 31);
+            this.MaskedTextBox_Confirmar_Senha.Margin = new System.Windows.Forms.Padding(0);
+            this.MaskedTextBox_Confirmar_Senha.Name = "MaskedTextBox_Confirmar_Senha";
+            this.MaskedTextBox_Confirmar_Senha.Size = new System.Drawing.Size(500, 28);
+            this.MaskedTextBox_Confirmar_Senha.TabIndex = 1;
+            this.MaskedTextBox_Confirmar_Senha.UseSystemPasswordChar = true;
             // 
             // Botao_Voltar
             // 
@@ -663,70 +721,14 @@
             this.Titulo_Cabecalho.Text = "Sistema de Gerenciamento de Apólices";
             this.Titulo_Cabecalho.Click += new System.EventHandler(this.Titulo_Cabecalho_Click);
             // 
-            // Group_Senha
+            // MaskedTextBox_Estado
             // 
-            this.Group_Senha.Controls.Add(this.Label_Senha);
-            this.Group_Senha.Controls.Add(this.MaskedTextBox_Senha);
-            this.Group_Senha.Location = new System.Drawing.Point(1042, 336);
-            this.Group_Senha.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.Group_Senha.Name = "Group_Senha";
-            this.Group_Senha.Size = new System.Drawing.Size(509, 84);
-            this.Group_Senha.TabIndex = 20;
-            // 
-            // Label_Senha
-            // 
-            this.Label_Senha.AutoSize = true;
-            this.Label_Senha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Senha.Location = new System.Drawing.Point(0, 0);
-            this.Label_Senha.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.Label_Senha.Name = "Label_Senha";
-            this.Label_Senha.Size = new System.Drawing.Size(180, 23);
-            this.Label_Senha.TabIndex = 0;
-            this.Label_Senha.Text = "Senha do funcionário*";
-            this.Label_Senha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Label_Senha.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // MaskedTextBox_Senha
-            // 
-            this.MaskedTextBox_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaskedTextBox_Senha.Location = new System.Drawing.Point(0, 31);
-            this.MaskedTextBox_Senha.Margin = new System.Windows.Forms.Padding(0);
-            this.MaskedTextBox_Senha.Name = "MaskedTextBox_Senha";
-            this.MaskedTextBox_Senha.Size = new System.Drawing.Size(500, 28);
-            this.MaskedTextBox_Senha.TabIndex = 1;
-            this.MaskedTextBox_Senha.UseSystemPasswordChar = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.label1);
-            this.flowLayoutPanel2.Controls.Add(this.MaskedTextBox_Confirmar_Senha);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(8, 420);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(509, 84);
-            this.flowLayoutPanel2.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Confirmar Senha*";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // MaskedTextBox_Confirmar_Senha
-            // 
-            this.MaskedTextBox_Confirmar_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaskedTextBox_Confirmar_Senha.Location = new System.Drawing.Point(0, 31);
-            this.MaskedTextBox_Confirmar_Senha.Margin = new System.Windows.Forms.Padding(0);
-            this.MaskedTextBox_Confirmar_Senha.Name = "MaskedTextBox_Confirmar_Senha";
-            this.MaskedTextBox_Confirmar_Senha.Size = new System.Drawing.Size(500, 28);
-            this.MaskedTextBox_Confirmar_Senha.TabIndex = 1;
-            this.MaskedTextBox_Confirmar_Senha.UseSystemPasswordChar = true;
+            this.MaskedTextBox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Estado.Mask = "AA";
+            this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
+            this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Estado.TabIndex = 3;
             // 
             // Tela_Cadastro_Funcionario
             // 
@@ -771,12 +773,12 @@
             this.Group_Celular.PerformLayout();
             this.Group_Email.ResumeLayout(false);
             this.Group_Email.PerformLayout();
-            this.Cabecalho.ResumeLayout(false);
-            this.Cabecalho.PerformLayout();
             this.Group_Senha.ResumeLayout(false);
             this.Group_Senha.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            this.Cabecalho.ResumeLayout(false);
+            this.Cabecalho.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,22 +799,18 @@
         private System.Windows.Forms.DateTimePicker DTPicker_Data_Nascimento;
         private System.Windows.Forms.FlowLayoutPanel Group_Cpf_Cnpj;
         private System.Windows.Forms.Label Label_Cpf_Cnpj;
-        private System.Windows.Forms.TextBox Textbox_Cpf;
         private System.Windows.Forms.FlowLayoutPanel Group_Cnh;
         private System.Windows.Forms.Label Label_Cnh;
-        private System.Windows.Forms.TextBox Textbox_Cnh;
         private System.Windows.Forms.FlowLayoutPanel Group_Genero;
         private System.Windows.Forms.Label Label_Genero;
         private System.Windows.Forms.ComboBox Combobox_Genero;
         private System.Windows.Forms.FlowLayoutPanel Group_Cep;
         private System.Windows.Forms.Label Label_Cep;
-        private System.Windows.Forms.TextBox Textbox_Cep;
         private System.Windows.Forms.FlowLayoutPanel Group_Cidade;
         private System.Windows.Forms.Label Label_Cidade;
         private System.Windows.Forms.TextBox Textbox_Cidade;
         private System.Windows.Forms.FlowLayoutPanel Group_Estado;
         private System.Windows.Forms.Label Label_Estado;
-        private System.Windows.Forms.TextBox Textbox_Estado;
         private System.Windows.Forms.FlowLayoutPanel Group_Bairro;
         private System.Windows.Forms.Label Label_Bairro;
         private System.Windows.Forms.TextBox Textbox_Bairro;
@@ -821,13 +819,11 @@
         private System.Windows.Forms.TextBox Textbox_Rua;
         private System.Windows.Forms.FlowLayoutPanel Group_Numero;
         private System.Windows.Forms.Label Label_Numero;
-        private System.Windows.Forms.TextBox Textbox_Numero;
         private System.Windows.Forms.FlowLayoutPanel Group_Complemento;
         private System.Windows.Forms.Label Label_Complemento;
         private System.Windows.Forms.TextBox Textbox_Complemento;
         private System.Windows.Forms.FlowLayoutPanel Group_Celular;
         private System.Windows.Forms.Label Label_Celular;
-        private System.Windows.Forms.TextBox Textbox_Celular;
         private System.Windows.Forms.FlowLayoutPanel Group_Email;
         private System.Windows.Forms.Label Label_Email;
         private System.Windows.Forms.TextBox Textbox_Email;
@@ -839,5 +835,11 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox MaskedTextBox_Confirmar_Senha;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Cpf;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Cnh;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Cep;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Celular;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Numero;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Estado;
     }
 }

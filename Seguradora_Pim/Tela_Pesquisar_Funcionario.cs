@@ -43,6 +43,7 @@ namespace Seguradora_Pim {
 
             switch (responsavel_chamada) {
                 case "Botao_Informacoes_Funcionario":
+
                     Tela_Informacoes_Funcionario tela_informacoes_funcionario = new Tela_Informacoes_Funcionario();
 
                     //Removendo mascara de caixa de texto
@@ -54,13 +55,19 @@ namespace Seguradora_Pim {
                     this.Hide();
                     tela_informacoes_funcionario.Show();
 
-                    break;
+                break;
+
                 case "Botao_Modificar_Funcionario":
+                    //Mesma logica seguida ali em cima
                     Tela_Modificar_Funcionario tela_modificar_funcionario = new Tela_Modificar_Funcionario();
+                    MaskedTextBox_Cpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                     tela_modificar_funcionario.Tela_Anterior = this;
+                    tela_modificar_funcionario.Cpf_Funcionario = MaskedTextBox_Cpf.Text;
                     this.Hide();
                     tela_modificar_funcionario.Show();
-                    break;
+
+                break;
+
                 case "Botao_Deletar_Funcionario":
                     System.Windows.Forms.MessageBox.Show("Deletou!");
                     break;
