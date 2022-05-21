@@ -1,5 +1,5 @@
 ﻿namespace Seguradora_Pim {
-    partial class Tela_Cadastro_Funcionario {
+    partial class Tela_Modificar_Funcionario {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -72,12 +72,6 @@
             this.Titulo_Tela = new System.Windows.Forms.Label();
             this.Cabecalho = new System.Windows.Forms.Panel();
             this.Titulo_Cabecalho = new System.Windows.Forms.Label();
-            this.Group_Senha = new System.Windows.Forms.FlowLayoutPanel();
-            this.Label_Senha = new System.Windows.Forms.Label();
-            this.MaskedTextBox_Senha = new System.Windows.Forms.MaskedTextBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.MaskedTextBox_Confirmar_Senha = new System.Windows.Forms.MaskedTextBox();
             this.Container_Principal.SuspendLayout();
             this.Formulario.SuspendLayout();
             this.Group_Nome.SuspendLayout();
@@ -95,8 +89,6 @@
             this.Group_Celular.SuspendLayout();
             this.Group_Email.SuspendLayout();
             this.Cabecalho.SuspendLayout();
-            this.Group_Senha.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Container_Principal
@@ -111,9 +103,8 @@
             this.Container_Principal.Location = new System.Drawing.Point(0, 0);
             this.Container_Principal.Margin = new System.Windows.Forms.Padding(0, 0, 0, 16);
             this.Container_Principal.Name = "Container_Principal";
-            this.Container_Principal.Size = new System.Drawing.Size(1712, 777);
-            this.Container_Principal.TabIndex = 0;
-            this.Container_Principal.Paint += new System.Windows.Forms.PaintEventHandler(this.Container_Principal_Paint_1);
+            this.Container_Principal.Size = new System.Drawing.Size(1712, 698);
+            this.Container_Principal.TabIndex = 1;
             // 
             // Formulario
             // 
@@ -134,17 +125,14 @@
             this.Formulario.Controls.Add(this.Group_Complemento);
             this.Formulario.Controls.Add(this.Group_Celular);
             this.Formulario.Controls.Add(this.Group_Email);
-            this.Formulario.Controls.Add(this.Group_Senha);
-            this.Formulario.Controls.Add(this.flowLayoutPanel2);
             this.Formulario.Controls.Add(this.Botao_Voltar);
             this.Formulario.Controls.Add(this.Botao_Cadastrar);
             this.Formulario.Location = new System.Drawing.Point(78, 175);
             this.Formulario.Margin = new System.Windows.Forms.Padding(72, 16, 0, 0);
             this.Formulario.Name = "Formulario";
             this.Formulario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Formulario.Size = new System.Drawing.Size(1557, 579);
+            this.Formulario.Size = new System.Drawing.Size(1557, 492);
             this.Formulario.TabIndex = 9;
-            this.Formulario.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel3_Paint);
             // 
             // Group_Nome
             // 
@@ -559,7 +547,7 @@
             this.Group_Email.Controls.Add(this.Label_Email);
             this.Group_Email.Controls.Add(this.Textbox_Email);
             this.Group_Email.Location = new System.Drawing.Point(525, 336);
-            this.Group_Email.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.Group_Email.Margin = new System.Windows.Forms.Padding(8, 0, 500, 0);
             this.Group_Email.Name = "Group_Email";
             this.Group_Email.Size = new System.Drawing.Size(509, 84);
             this.Group_Email.TabIndex = 17;
@@ -595,7 +583,7 @@
             this.Botao_Voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Botao_Voltar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Botao_Voltar.ForeColor = System.Drawing.Color.White;
-            this.Botao_Voltar.Location = new System.Drawing.Point(8, 520);
+            this.Botao_Voltar.Location = new System.Drawing.Point(8, 436);
             this.Botao_Voltar.Margin = new System.Windows.Forms.Padding(8, 16, 1133, 0);
             this.Botao_Voltar.Name = "Botao_Voltar";
             this.Botao_Voltar.Size = new System.Drawing.Size(200, 48);
@@ -614,14 +602,13 @@
             this.Botao_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Botao_Cadastrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Botao_Cadastrar.ForeColor = System.Drawing.Color.White;
-            this.Botao_Cadastrar.Location = new System.Drawing.Point(1341, 520);
+            this.Botao_Cadastrar.Location = new System.Drawing.Point(1341, 436);
             this.Botao_Cadastrar.Margin = new System.Windows.Forms.Padding(0, 16, 0, 0);
             this.Botao_Cadastrar.Name = "Botao_Cadastrar";
             this.Botao_Cadastrar.Size = new System.Drawing.Size(200, 48);
             this.Botao_Cadastrar.TabIndex = 11;
             this.Botao_Cadastrar.Text = "Cadastrar";
             this.Botao_Cadastrar.UseVisualStyleBackColor = false;
-            this.Botao_Cadastrar.Click += new System.EventHandler(this.Botao_Cadastrar_Click);
             // 
             // Titulo_Tela
             // 
@@ -630,12 +617,13 @@
             this.Titulo_Tela.BackColor = System.Drawing.Color.Transparent;
             this.Titulo_Tela.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo_Tela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
-            this.Titulo_Tela.Location = new System.Drawing.Point(769, 120);
+            this.Titulo_Tela.Location = new System.Drawing.Point(770, 120);
             this.Titulo_Tela.Margin = new System.Windows.Forms.Padding(0, 0, 0, 16);
             this.Titulo_Tela.Name = "Titulo_Tela";
-            this.Titulo_Tela.Size = new System.Drawing.Size(174, 23);
+            this.Titulo_Tela.Size = new System.Drawing.Size(172, 23);
             this.Titulo_Tela.TabIndex = 3;
-            this.Titulo_Tela.Text = "Cadastrar funcionário";
+            this.Titulo_Tela.Text = "Modificar funcionário";
+            this.Titulo_Tela.Click += new System.EventHandler(this.Titulo_Tela_Click);
             // 
             // Cabecalho
             // 
@@ -647,7 +635,6 @@
             this.Cabecalho.Name = "Cabecalho";
             this.Cabecalho.Size = new System.Drawing.Size(1712, 72);
             this.Cabecalho.TabIndex = 0;
-            this.Cabecalho.Paint += new System.Windows.Forms.PaintEventHandler(this.Cabecalho_Paint);
             // 
             // Titulo_Cabecalho
             // 
@@ -661,85 +648,16 @@
             this.Titulo_Cabecalho.Size = new System.Drawing.Size(307, 23);
             this.Titulo_Cabecalho.TabIndex = 1;
             this.Titulo_Cabecalho.Text = "Sistema de Gerenciamento de Apólices";
-            this.Titulo_Cabecalho.Click += new System.EventHandler(this.Titulo_Cabecalho_Click);
             // 
-            // Group_Senha
-            // 
-            this.Group_Senha.Controls.Add(this.Label_Senha);
-            this.Group_Senha.Controls.Add(this.MaskedTextBox_Senha);
-            this.Group_Senha.Location = new System.Drawing.Point(1042, 336);
-            this.Group_Senha.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.Group_Senha.Name = "Group_Senha";
-            this.Group_Senha.Size = new System.Drawing.Size(509, 84);
-            this.Group_Senha.TabIndex = 20;
-            // 
-            // Label_Senha
-            // 
-            this.Label_Senha.AutoSize = true;
-            this.Label_Senha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Senha.Location = new System.Drawing.Point(0, 0);
-            this.Label_Senha.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.Label_Senha.Name = "Label_Senha";
-            this.Label_Senha.Size = new System.Drawing.Size(180, 23);
-            this.Label_Senha.TabIndex = 0;
-            this.Label_Senha.Text = "Senha do funcionário*";
-            this.Label_Senha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Label_Senha.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // MaskedTextBox_Senha
-            // 
-            this.MaskedTextBox_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaskedTextBox_Senha.Location = new System.Drawing.Point(0, 31);
-            this.MaskedTextBox_Senha.Margin = new System.Windows.Forms.Padding(0);
-            this.MaskedTextBox_Senha.Name = "MaskedTextBox_Senha";
-            this.MaskedTextBox_Senha.Size = new System.Drawing.Size(500, 28);
-            this.MaskedTextBox_Senha.TabIndex = 1;
-            this.MaskedTextBox_Senha.UseSystemPasswordChar = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.label1);
-            this.flowLayoutPanel2.Controls.Add(this.MaskedTextBox_Confirmar_Senha);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(8, 420);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(509, 84);
-            this.flowLayoutPanel2.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Confirmar Senha*";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // MaskedTextBox_Confirmar_Senha
-            // 
-            this.MaskedTextBox_Confirmar_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaskedTextBox_Confirmar_Senha.Location = new System.Drawing.Point(0, 31);
-            this.MaskedTextBox_Confirmar_Senha.Margin = new System.Windows.Forms.Padding(0);
-            this.MaskedTextBox_Confirmar_Senha.Name = "MaskedTextBox_Confirmar_Senha";
-            this.MaskedTextBox_Confirmar_Senha.Size = new System.Drawing.Size(500, 28);
-            this.MaskedTextBox_Confirmar_Senha.TabIndex = 1;
-            this.MaskedTextBox_Confirmar_Senha.UseSystemPasswordChar = true;
-            // 
-            // Tela_Cadastro_Funcionario
+            // Tela_Modificar_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1712, 777);
+            this.ClientSize = new System.Drawing.Size(1712, 698);
             this.Controls.Add(this.Container_Principal);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Tela_Cadastro_Funcionario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tela_Cadastro_Funcionario";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Tela_Cadastro_Funcionario_Load);
+            this.Name = "Tela_Modificar_Funcionario";
+            this.Text = "Tela_Modificar_Funcionario";
+            this.Load += new System.EventHandler(this.Tela_Modificar_Funcionario_Load);
             this.Container_Principal.ResumeLayout(false);
             this.Container_Principal.PerformLayout();
             this.Formulario.ResumeLayout(false);
@@ -773,10 +691,6 @@
             this.Group_Email.PerformLayout();
             this.Cabecalho.ResumeLayout(false);
             this.Cabecalho.PerformLayout();
-            this.Group_Senha.ResumeLayout(false);
-            this.Group_Senha.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,9 +699,6 @@
         #endregion
 
         private System.Windows.Forms.Panel Container_Principal;
-        private System.Windows.Forms.Panel Cabecalho;
-        private System.Windows.Forms.Label Titulo_Tela;
-        private System.Windows.Forms.Label Titulo_Cabecalho;
         private System.Windows.Forms.FlowLayoutPanel Formulario;
         private System.Windows.Forms.FlowLayoutPanel Group_Nome;
         private System.Windows.Forms.Label Label_Nome;
@@ -833,11 +744,8 @@
         private System.Windows.Forms.TextBox Textbox_Email;
         private System.Windows.Forms.Button Botao_Voltar;
         private System.Windows.Forms.Button Botao_Cadastrar;
-        private System.Windows.Forms.FlowLayoutPanel Group_Senha;
-        private System.Windows.Forms.Label Label_Senha;
-        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Senha;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Confirmar_Senha;
+        private System.Windows.Forms.Label Titulo_Tela;
+        private System.Windows.Forms.Panel Cabecalho;
+        private System.Windows.Forms.Label Titulo_Cabecalho;
     }
 }

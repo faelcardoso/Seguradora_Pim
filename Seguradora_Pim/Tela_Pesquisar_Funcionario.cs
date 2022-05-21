@@ -20,11 +20,11 @@ namespace Seguradora_Pim {
             set;
         }
         //Variavel usada para Verificar quem chamou essa tela.
-        public object Responsavel_Chamada {
+        public string Responsavel_Chamada {
             get;
             set;
-        }
 
+        }
         private void Cabecalho_Paint(object sender, PaintEventArgs e) {
 
         }
@@ -38,9 +38,39 @@ namespace Seguradora_Pim {
 
         }
         //TODO - Verificar qual botão enviou a chamada, assim será possível fazer um redirecionamento dinamico entre Forms...
+        private void Botao_Pesquisar_Click(object sender, EventArgs e) {
+            string responsavel_chamada = this.Responsavel_Chamada;
+
+            switch (responsavel_chamada) {
+                case "Botao_Informacoes_Funcionario":
+                    Tela_Informacoes_Funcionario tela_informacoes_funcionario = new Tela_Informacoes_Funcionario();
+
+                    //Removendo mascara de caixa de texto
+                    MaskedTextBox_Cpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                    //Atribuindo Cpf digitado para fazer a lógica da tela de info.
+                    tela_informacoes_funcionario.Cpf_Funcionario = MaskedTextBox_Cpf.Text;
+                    //Salvando tela para fazer a lógica de "Voltar"
+                    tela_informacoes_funcionario.Tela_Anterior = this;
+                    this.Hide();
+                    tela_informacoes_funcionario.Show();
+
+                    break;
+                case "Botao_Modificar_Funcionario":
+                    Tela_Modificar_Funcionario tela_modificar_funcionario = new Tela_Modificar_Funcionario();
+                    tela_modificar_funcionario.Tela_Anterior = this;
+                    this.Hide();
+                    tela_modificar_funcionario.Show();
+                    break;
+                case "Botao_Deletar_Funcionario":
+                    System.Windows.Forms.MessageBox.Show("Deletou!");
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void Tela_Pesquisar_Funcionario_Load(object sender, EventArgs e) {
-            string quem_Chamou = this.Responsavel_Chamada.ToString();
-            Debug.WriteLine(quem_Chamou);
+
         }
     }
 }

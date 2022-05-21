@@ -33,26 +33,33 @@ namespace Seguradora_Pim {
         //TODO - Verificar qual botao está enviando a requisição
         private void Botao_Modificar_Funcionario_Click(object sender, EventArgs e) {
             Tela_Pesquisar_Funcionario tela_informacoes_funcionario = new Tela_Pesquisar_Funcionario();
+            Button botao = sender as Button;
             tela_informacoes_funcionario.Tela_Anterior = this;
-            tela_informacoes_funcionario.Responsavel_Chamada = sender;
+            tela_informacoes_funcionario.Responsavel_Chamada = botao.Name;
             tela_informacoes_funcionario.Show();
             this.Hide();
         }
 
         private void Botao_Informacoes_Funcionario_Click(object sender, EventArgs e) {
             Tela_Pesquisar_Funcionario tela_informacoes_funcionario = new Tela_Pesquisar_Funcionario();
+            Button botao = sender as Button;
             tela_informacoes_funcionario.Tela_Anterior = this;
-            tela_informacoes_funcionario.Responsavel_Chamada = sender;
+            tela_informacoes_funcionario.Responsavel_Chamada = botao.Name;
             tela_informacoes_funcionario.Show();
             this.Hide();
         }
 
         private void Botao_Deletar_Funcionario_Click(object sender, EventArgs e) {
             Tela_Pesquisar_Funcionario tela_informacoes_funcionario = new Tela_Pesquisar_Funcionario();
+            Button botao = sender as Button;
             tela_informacoes_funcionario.Tela_Anterior = this;
-            tela_informacoes_funcionario.Responsavel_Chamada = sender;
+            tela_informacoes_funcionario.Responsavel_Chamada = botao.Name;
             tela_informacoes_funcionario.Show();
             this.Hide();
+        }
+
+        private void Tela_Opcoes_Funcionario_Load(object sender, EventArgs e) {
+
         }
     }
 }

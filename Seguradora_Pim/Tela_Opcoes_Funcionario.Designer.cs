@@ -175,6 +175,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gerenciamento de Apólices";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Tela_Opcoes_Funcionario_Load);
             this.Cabecalho.ResumeLayout(false);
             this.Cabecalho.PerformLayout();
             this.Container_Principal.ResumeLayout(false);

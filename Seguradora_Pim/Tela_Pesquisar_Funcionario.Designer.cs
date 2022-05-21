@@ -27,7 +27,7 @@
             this.Formulario = new System.Windows.Forms.FlowLayoutPanel();
             this.Group_Pesquisa = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Pesquisa = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.MaskedTextBox_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.Botao_Cancelar = new System.Windows.Forms.Button();
             this.Botao_Pesquisar = new System.Windows.Forms.Button();
             this.Titulo_Tela = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             // Group_Pesquisa
             // 
             this.Group_Pesquisa.Controls.Add(this.Label_Pesquisa);
-            this.Group_Pesquisa.Controls.Add(this.maskedTextBox1);
+            this.Group_Pesquisa.Controls.Add(this.MaskedTextBox_Cpf);
             this.Group_Pesquisa.Location = new System.Drawing.Point(0, 0);
             this.Group_Pesquisa.Margin = new System.Windows.Forms.Padding(0);
             this.Group_Pesquisa.Name = "Group_Pesquisa";
@@ -87,16 +87,16 @@
             this.Label_Pesquisa.Text = "CPF do Funcionário";
             this.Label_Pesquisa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // maskedTextBox1
+            // MaskedTextBox_Cpf
             // 
-            this.maskedTextBox1.Culture = new System.Globalization.CultureInfo("");
-            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(3, 34);
-            this.maskedTextBox1.Mask = "000.000.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(500, 30);
-            this.maskedTextBox1.TabIndex = 1;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.MaskedTextBox_Cpf.Culture = new System.Globalization.CultureInfo("");
+            this.MaskedTextBox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cpf.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Cpf.Mask = "000.000.000-00";
+            this.MaskedTextBox_Cpf.Name = "MaskedTextBox_Cpf";
+            this.MaskedTextBox_Cpf.Size = new System.Drawing.Size(500, 30);
+            this.MaskedTextBox_Cpf.TabIndex = 1;
+            this.MaskedTextBox_Cpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // Botao_Cancelar
             // 
@@ -134,6 +134,7 @@
             this.Botao_Pesquisar.TabIndex = 13;
             this.Botao_Pesquisar.Text = "Pesquisar";
             this.Botao_Pesquisar.UseVisualStyleBackColor = false;
+            this.Botao_Pesquisar.Click += new System.EventHandler(this.Botao_Pesquisar_Click);
             // 
             // Titulo_Tela
             // 
@@ -142,12 +143,12 @@
             this.Titulo_Tela.BackColor = System.Drawing.Color.Transparent;
             this.Titulo_Tela.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo_Tela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
-            this.Titulo_Tela.Location = new System.Drawing.Point(302, 120);
+            this.Titulo_Tela.Location = new System.Drawing.Point(326, 120);
             this.Titulo_Tela.Margin = new System.Windows.Forms.Padding(0, 0, 0, 16);
             this.Titulo_Tela.Name = "Titulo_Tela";
-            this.Titulo_Tela.Size = new System.Drawing.Size(223, 23);
+            this.Titulo_Tela.Size = new System.Drawing.Size(175, 23);
             this.Titulo_Tela.TabIndex = 3;
-            this.Titulo_Tela.Text = "Informações do Funcionário";
+            this.Titulo_Tela.Text = "Pesquisar Funcionário";
             // 
             // Cabecalho
             // 
@@ -208,6 +209,6 @@
         private System.Windows.Forms.FlowLayoutPanel Formulario;
         private System.Windows.Forms.Button Botao_Cancelar;
         private System.Windows.Forms.Button Botao_Pesquisar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox_Cpf;
     }
 }

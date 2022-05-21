@@ -72,5 +72,9 @@ namespace Seguradora_Pim {
         private void Tela_Cadastro_Funcionario_Load(object sender, EventArgs e) {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e) {
+
+        }
     }
 }

@@ -100,6 +100,18 @@
     <Compile Include="Tela_Cadastro_Funcionario.Designer.cs">
       <DependentUpon>Tela_Cadastro_Funcionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela_Informacoes_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_Informacoes_Funcionario.Designer.cs">
+      <DependentUpon>Tela_Informacoes_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_Modificar_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_Modificar_Funcionario.Designer.cs">
+      <DependentUpon>Tela_Modificar_Funcionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_Pesquisar_Funcionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </Compile>
     <EmbeddedResource Include="Tela_Cadastro_Funcionario.resx">
       <DependentUpon>Tela_Cadastro_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_Informacoes_Funcionario.resx">
+      <DependentUpon>Tela_Informacoes_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_Modificar_Funcionario.resx">
+      <DependentUpon>Tela_Modificar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_Pesquisar_Funcionario.resx">
       <DependentUpon>Tela_Pesquisar_Funcionario.cs</DependentUpon>
