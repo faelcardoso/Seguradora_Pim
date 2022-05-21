@@ -48,6 +48,7 @@
             this.Textbox_Cidade = new System.Windows.Forms.TextBox();
             this.Group_Estado = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Estado = new System.Windows.Forms.Label();
+            this.MaskedTextBox_Estado = new System.Windows.Forms.MaskedTextBox();
             this.Group_Bairro = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Bairro = new System.Windows.Forms.Label();
             this.Textbox_Bairro = new System.Windows.Forms.TextBox();
@@ -77,7 +78,6 @@
             this.Titulo_Tela = new System.Windows.Forms.Label();
             this.Cabecalho = new System.Windows.Forms.Panel();
             this.Titulo_Cabecalho = new System.Windows.Forms.Label();
-            this.MaskedTextBox_Estado = new System.Windows.Forms.MaskedTextBox();
             this.Container_Principal.SuspendLayout();
             this.Formulario.SuspendLayout();
             this.Group_Nome.SuspendLayout();
@@ -392,6 +392,15 @@
             this.Label_Estado.Text = "Estado*";
             this.Label_Estado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // MaskedTextBox_Estado
+            // 
+            this.MaskedTextBox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Estado.Mask = "AA";
+            this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
+            this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Estado.TabIndex = 3;
+            // 
             // Group_Bairro
             // 
             this.Group_Bairro.Controls.Add(this.Label_Bairro);
@@ -607,9 +616,10 @@
             this.MaskedTextBox_Senha.Location = new System.Drawing.Point(0, 31);
             this.MaskedTextBox_Senha.Margin = new System.Windows.Forms.Padding(0);
             this.MaskedTextBox_Senha.Name = "MaskedTextBox_Senha";
+            this.MaskedTextBox_Senha.PasswordChar = '*';
             this.MaskedTextBox_Senha.Size = new System.Drawing.Size(500, 28);
             this.MaskedTextBox_Senha.TabIndex = 1;
-            this.MaskedTextBox_Senha.UseSystemPasswordChar = true;
+            this.MaskedTextBox_Senha.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // flowLayoutPanel2
             // 
@@ -639,8 +649,10 @@
             this.MaskedTextBox_Confirmar_Senha.Location = new System.Drawing.Point(0, 31);
             this.MaskedTextBox_Confirmar_Senha.Margin = new System.Windows.Forms.Padding(0);
             this.MaskedTextBox_Confirmar_Senha.Name = "MaskedTextBox_Confirmar_Senha";
+            this.MaskedTextBox_Confirmar_Senha.PasswordChar = '*';
             this.MaskedTextBox_Confirmar_Senha.Size = new System.Drawing.Size(500, 28);
             this.MaskedTextBox_Confirmar_Senha.TabIndex = 1;
+            this.MaskedTextBox_Confirmar_Senha.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.MaskedTextBox_Confirmar_Senha.UseSystemPasswordChar = true;
             // 
             // Botao_Voltar
@@ -720,15 +732,6 @@
             this.Titulo_Cabecalho.TabIndex = 1;
             this.Titulo_Cabecalho.Text = "Sistema de Gerenciamento de Apólices";
             this.Titulo_Cabecalho.Click += new System.EventHandler(this.Titulo_Cabecalho_Click);
-            // 
-            // MaskedTextBox_Estado
-            // 
-            this.MaskedTextBox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
-            this.MaskedTextBox_Estado.Mask = "AA";
-            this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
-            this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Estado.TabIndex = 3;
             // 
             // Tela_Cadastro_Funcionario
             // 

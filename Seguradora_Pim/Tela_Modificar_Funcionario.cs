@@ -13,6 +13,13 @@ namespace Seguradora_Pim {
     public partial class Tela_Modificar_Funcionario : Form {
         public Tela_Modificar_Funcionario() {
             InitializeComponent();
+            //Criando o objeto Para Genero
+            Enum_Type genero = new Enum_Type();
+            Array array_genero = genero.Carregar_Genero();
+            //Armazenando os valores na combobox
+            foreach (var item in array_genero) {
+                Combobox_Genero.Items.Add(item);
+            }
         }
 
         public Form Tela_Anterior {

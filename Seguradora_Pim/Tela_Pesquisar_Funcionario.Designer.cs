@@ -90,6 +90,7 @@
             // MaskedTextBox_Cpf
             // 
             this.MaskedTextBox_Cpf.Culture = new System.Globalization.CultureInfo("");
+            this.MaskedTextBox_Cpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.MaskedTextBox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaskedTextBox_Cpf.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cpf.Mask = "000.000.000-00";
