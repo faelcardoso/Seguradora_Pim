@@ -69,7 +69,16 @@ namespace Seguradora_Pim {
                 break;
 
                 case "Botao_Deletar_Funcionario":
-                    System.Windows.Forms.MessageBox.Show("Deletou!");
+                    Funcionario obj_funcionario = new Funcionario();
+                    DialogResult messagebox_deletar = MessageBox.Show("Deseja mesmo deletar o Funcionário?", "Confirmação", MessageBoxButtons.YesNo);
+                    if (messagebox_deletar == DialogResult.Yes) {
+                        MaskedTextBox_Cpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                        string cpf_funcionario = MaskedTextBox_Cpf.Text;
+                        string resultado_deletar_funcionario = obj_funcionario.deletar_funcionario(cpf_funcionario);
+                        MessageBox.Show(resultado_deletar_funcionario, "Ok!");
+                        this.Tela_Anterior.Show();
+                        this.Close();
+                    }
                     break;
                 default:
                     break;

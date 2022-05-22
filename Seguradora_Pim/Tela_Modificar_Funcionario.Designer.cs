@@ -48,6 +48,7 @@
             this.Textbox_Cidade = new System.Windows.Forms.TextBox();
             this.Group_Estado = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Estado = new System.Windows.Forms.Label();
+            this.MaskedTextBox_Estado = new System.Windows.Forms.MaskedTextBox();
             this.Group_Bairro = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_Bairro = new System.Windows.Forms.Label();
             this.Textbox_Bairro = new System.Windows.Forms.TextBox();
@@ -67,11 +68,10 @@
             this.Label_Email = new System.Windows.Forms.Label();
             this.Textbox_Email = new System.Windows.Forms.TextBox();
             this.Botao_Voltar = new System.Windows.Forms.Button();
-            this.Botao_Cadastrar = new System.Windows.Forms.Button();
+            this.Botao_Modificar = new System.Windows.Forms.Button();
             this.Titulo_Tela = new System.Windows.Forms.Label();
             this.Cabecalho = new System.Windows.Forms.Panel();
             this.Titulo_Cabecalho = new System.Windows.Forms.Label();
-            this.MaskedTextBox_Estado = new System.Windows.Forms.MaskedTextBox();
             this.Container_Principal.SuspendLayout();
             this.Formulario.SuspendLayout();
             this.Group_Nome.SuspendLayout();
@@ -126,7 +126,7 @@
             this.Formulario.Controls.Add(this.Group_Celular);
             this.Formulario.Controls.Add(this.Group_Email);
             this.Formulario.Controls.Add(this.Botao_Voltar);
-            this.Formulario.Controls.Add(this.Botao_Cadastrar);
+            this.Formulario.Controls.Add(this.Botao_Modificar);
             this.Formulario.Location = new System.Drawing.Point(78, 175);
             this.Formulario.Margin = new System.Windows.Forms.Padding(72, 16, 0, 0);
             this.Formulario.Name = "Formulario";
@@ -380,6 +380,15 @@
             this.Label_Estado.Text = "Estado*";
             this.Label_Estado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // MaskedTextBox_Estado
+            // 
+            this.MaskedTextBox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
+            this.MaskedTextBox_Estado.Mask = "AA";
+            this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
+            this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
+            this.MaskedTextBox_Estado.TabIndex = 2;
+            // 
             // Group_Bairro
             // 
             this.Group_Bairro.Controls.Add(this.Label_Bairro);
@@ -585,23 +594,24 @@
             this.Botao_Voltar.UseVisualStyleBackColor = false;
             this.Botao_Voltar.Click += new System.EventHandler(this.Botao_Voltar_Click);
             // 
-            // Botao_Cadastrar
+            // Botao_Modificar
             // 
-            this.Botao_Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Botao_Cadastrar.AutoEllipsis = true;
-            this.Botao_Cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
-            this.Botao_Cadastrar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Botao_Cadastrar.FlatAppearance.BorderSize = 0;
-            this.Botao_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Botao_Cadastrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Botao_Cadastrar.ForeColor = System.Drawing.Color.White;
-            this.Botao_Cadastrar.Location = new System.Drawing.Point(1341, 436);
-            this.Botao_Cadastrar.Margin = new System.Windows.Forms.Padding(0, 16, 0, 0);
-            this.Botao_Cadastrar.Name = "Botao_Cadastrar";
-            this.Botao_Cadastrar.Size = new System.Drawing.Size(200, 48);
-            this.Botao_Cadastrar.TabIndex = 11;
-            this.Botao_Cadastrar.Text = "Modificar";
-            this.Botao_Cadastrar.UseVisualStyleBackColor = false;
+            this.Botao_Modificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Botao_Modificar.AutoEllipsis = true;
+            this.Botao_Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
+            this.Botao_Modificar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Botao_Modificar.FlatAppearance.BorderSize = 0;
+            this.Botao_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Botao_Modificar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Botao_Modificar.ForeColor = System.Drawing.Color.White;
+            this.Botao_Modificar.Location = new System.Drawing.Point(1341, 436);
+            this.Botao_Modificar.Margin = new System.Windows.Forms.Padding(0, 16, 0, 0);
+            this.Botao_Modificar.Name = "Botao_Modificar";
+            this.Botao_Modificar.Size = new System.Drawing.Size(200, 48);
+            this.Botao_Modificar.TabIndex = 11;
+            this.Botao_Modificar.Text = "Modificar";
+            this.Botao_Modificar.UseVisualStyleBackColor = false;
+            this.Botao_Modificar.Click += new System.EventHandler(this.Botao_Modificar_Click);
             // 
             // Titulo_Tela
             // 
@@ -641,15 +651,6 @@
             this.Titulo_Cabecalho.Size = new System.Drawing.Size(307, 23);
             this.Titulo_Cabecalho.TabIndex = 1;
             this.Titulo_Cabecalho.Text = "Sistema de Gerenciamento de Apólices";
-            // 
-            // MaskedTextBox_Estado
-            // 
-            this.MaskedTextBox_Estado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
-            this.MaskedTextBox_Estado.Mask = "AA";
-            this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
-            this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Estado.TabIndex = 2;
             // 
             // Tela_Modificar_Funcionario
             // 
@@ -740,7 +741,7 @@
         private System.Windows.Forms.Label Label_Email;
         private System.Windows.Forms.TextBox Textbox_Email;
         private System.Windows.Forms.Button Botao_Voltar;
-        private System.Windows.Forms.Button Botao_Cadastrar;
+        private System.Windows.Forms.Button Botao_Modificar;
         private System.Windows.Forms.Label Titulo_Tela;
         private System.Windows.Forms.Panel Cabecalho;
         private System.Windows.Forms.Label Titulo_Cabecalho;

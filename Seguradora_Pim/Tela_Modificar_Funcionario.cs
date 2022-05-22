@@ -60,5 +60,43 @@ namespace Seguradora_Pim {
             this.Close();
             this.Tela_Anterior.Show();
         }
+
+        private void Botao_Modificar_Click(object sender, EventArgs e) {
+            //Recuperando valores dos textbox
+            string valor_nome = Textbox_Nome.Text;
+            string valor_data_nascimento = DTPicker_Data_Nascimento.Text;
+
+            MaskedTextBox_Cpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            string valor_cpf_cnpj = MaskedTextBox_Cpf.Text;
+
+            MaskedTextBox_Cnh.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            string valor_cnh = MaskedTextBox_Cnh.Text;
+
+            string valor_genero = Combobox_Genero.SelectedItem.ToString();
+
+            MaskedTextBox_Cep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            string valor_cep = MaskedTextBox_Cep.Text;
+
+            string valor_estado = MaskedTextBox_Estado.Text;
+            string valor_cidade = Textbox_Cidade.Text;
+            string valor_bairro = Textbox_Bairro.Text;
+            string valor_rua = Textbox_Rua.Text;
+            int valor_numero = Int32.Parse(MaskedTextBox_Numero.Text);
+            string valor_complemento = Textbox_Complemento.Text;
+
+            MaskedTextBox_Celular.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            string valor_celular = MaskedTextBox_Celular.Text;
+
+            string valor_email = Textbox_Email.Text;
+
+            Funcionario obj_funcionario = new Funcionario();
+            string resultado_modificar_funcionario = obj_funcionario.modificar_funcionario(valor_nome, valor_cpf_cnpj, valor_cnh, valor_genero, valor_data_nascimento, valor_cep, valor_estado, valor_cidade, valor_bairro, valor_rua, valor_numero, valor_complemento, valor_celular, valor_email);
+
+            System.Windows.Forms.MessageBox.Show(resultado_modificar_funcionario);
+
+            this.Close();
+            this.Tela_Anterior.Show();
+
+        }
     }
 }

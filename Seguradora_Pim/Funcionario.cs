@@ -14,7 +14,7 @@ namespace Seguradora_Pim {
         public string cadastrar_funcionario(string nome, string cpf_cnpj, string cnh, string genero, string data_nascimento, string cep, string estado, string cidade, string bairro, string rua, int numero, string complemento, string celular, string email, string senha_funcionario) {
             
             //Variavel de retorno
-            string mensagem_cadastro = "Funcionário cadastrado com sucesso!";
+            string mensagem_resposta = "Funcionário cadastrado com sucesso!";
             //String query inserir Pessoa
             string str_cmd_cadastrar_pessoa =
             "INSERT INTO " +
@@ -100,13 +100,18 @@ namespace Seguradora_Pim {
 
                 int cmd_cadastrar_funcionario_res = cmd_cadastrar_funcionario.ExecuteNonQuery();
 
+                conn.Close();
+
             } else {
                 //Nao cadastrou
-                mensagem_cadastro = "Falha ao cadastrar o Funcionário.";
-                return mensagem_cadastro;
+                mensagem_resposta = "Falha ao cadastrar o Funcionário.";
+                conn.Close();
+                return mensagem_resposta;
             }
+
             //Cadastrou o funcionario
-            return mensagem_cadastro;
+            conn.Close();
+            return mensagem_resposta;
         }
         //Listar informacoes do funcionario
         public Dictionary<string, string> listar_funcionario(string Cpf) {
@@ -149,16 +154,17 @@ namespace Seguradora_Pim {
                 }
             }
 
+            conn.Close();
             return dict_dados_funcionario;
 
         }
 
-        public string modificar_funcionario(string nome, string cpf_cnpj, string cnh, string genero, string data_nascimento, string cep, string estado, string cidade, string bairro, string rua, int numero, string complemento, string celular, string email, string senha_funcionario) {
+        public string modificar_funcionario(string nome, string cpf_cnpj, string cnh, string genero, string data_nascimento, string cep, string estado, string cidade, string bairro, string rua, int numero, string complemento, string celular, string email) {
             //Variavel de retorno
-            string mensagem_cadastro = "Funcionário modificado com sucesso!";
+            string mensagem_resposta = "Funcionário modificado com sucesso!";
             //String query inserir Pessoa
             string str_cmd_modificar_pessoa =
-            "UPDATE" +
+            "UPDATE " +
             "tb_pessoa " +
             "SET " +
             "nome = @nome, " +
@@ -174,7 +180,8 @@ namespace Seguradora_Pim {
             "numero = @numero, " +
             "complemento = @complemento, " +
             "celular = @celular, " +
-            "email = @email";
+            "email = @email " +
+            "WHERE tb_pessoa.cpf_cnpj = @cpf_cnpj";
 
             //Conexao
             NpgsqlConnection conn = new NpgsqlConnection(str_conn);
@@ -199,12 +206,42 @@ namespace Seguradora_Pim {
             int cmd_modificar_pessoa_res = cmd_modificar_pessoa.ExecuteNonQuery();
 
             if (cmd_modificar_pessoa_res != 1) {
-                mensagem_cadastro = "Usuário não foi modificado.";
-                return mensagem_cadastro;
+                mensagem_resposta = "Usuário não foi modificado.";
+                return mensagem_resposta;
             }
 
-            return mensagem_cadastro;
+            conn.Close();
+            return mensagem_resposta;
 
+        }
+
+        public string deletar_funcionario (string cpf_cnpj) {
+            //Variavel de retorno
+            string mensagem_resposta = "Funcionário deletado com sucesso!";
+            //String query inserir Pessoa
+            string str_cmd_modificar_pessoa =
+            "DELETE FROM " +
+            "tb_pessoa " +
+            "WHERE tb_pessoa.cpf_cnpj = @cpf_cnpj";
+
+            //Conexao
+            NpgsqlConnection conn = new NpgsqlConnection(str_conn);
+            conn.Open();
+
+            //Comando
+            NpgsqlCommand cmd_deletar_funcionario = new NpgsqlCommand(str_cmd_modificar_pessoa, conn);
+            cmd_deletar_funcionario.Parameters.AddWithValue("cpf_cnpj", cpf_cnpj);
+            int cmd_deletar_funcionario_res = cmd_deletar_funcionario.ExecuteNonQuery();
+
+            //Verificando se alteração foi feita em somente UMA linha
+            if (cmd_deletar_funcionario_res != 1) {
+                mensagem_resposta = "Usuário não foi deletado.";
+                conn.Close();
+                return mensagem_resposta;
+            }
+
+            conn.Close();
+            return mensagem_resposta;
         }
     }
 }
