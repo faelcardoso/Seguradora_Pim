@@ -92,5 +92,12 @@ namespace Seguradora_Pim {
         private void Tela_Pesquisar_Funcionario_Load(object sender, EventArgs e) {
 
         }
+
+        private void MaskedTextBox_Cpf_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                MaskedTextBox_Cpf.Select(0, 0);
+            });
+        }
     }
 }

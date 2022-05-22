@@ -245,6 +245,7 @@
             this.MaskedTextBox_Cpf.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Cpf.TabIndex = 3;
             this.MaskedTextBox_Cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.MaskedTextBox_Cpf.Enter += new System.EventHandler(this.MaskedTextBox_Cpf_Enter);
             // 
             // Group_Cnh
             // 
@@ -277,6 +278,7 @@
             this.MaskedTextBox_Cnh.PromptChar = ' ';
             this.MaskedTextBox_Cnh.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Cnh.TabIndex = 4;
+            this.MaskedTextBox_Cnh.Enter += new System.EventHandler(this.MaskedTextBox_Cnh_Enter);
             // 
             // Group_Genero
             // 
@@ -343,6 +345,7 @@
             this.MaskedTextBox_Cep.PromptChar = ' ';
             this.MaskedTextBox_Cep.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Cep.TabIndex = 6;
+            this.MaskedTextBox_Cep.Enter += new System.EventHandler(this.MaskedTextBox_Cep_Enter);
             // 
             // Group_Cidade
             // 
@@ -406,6 +409,7 @@
             this.MaskedTextBox_Estado.PromptChar = ' ';
             this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Estado.TabIndex = 8;
+            this.MaskedTextBox_Estado.Enter += new System.EventHandler(this.MaskedTextBox_Estado_Enter);
             // 
             // Group_Bairro
             // 
@@ -500,6 +504,7 @@
             this.MaskedTextBox_Numero.PromptChar = ' ';
             this.MaskedTextBox_Numero.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Numero.TabIndex = 11;
+            this.MaskedTextBox_Numero.Enter += new System.EventHandler(this.MaskedTextBox_Numero_Enter);
             // 
             // Group_Complemento
             // 
@@ -563,6 +568,7 @@
             this.MaskedTextBox_Celular.PromptChar = ' ';
             this.MaskedTextBox_Celular.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Celular.TabIndex = 13;
+            this.MaskedTextBox_Celular.Enter += new System.EventHandler(this.MaskedTextBox_Celular_Enter);
             // 
             // Group_Email
             // 
@@ -616,7 +622,6 @@
             this.Label_Senha.TabIndex = 0;
             this.Label_Senha.Text = "Senha do funcionário*";
             this.Label_Senha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Label_Senha.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // MaskedTextBox_Senha
             // 

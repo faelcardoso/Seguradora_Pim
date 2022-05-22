@@ -107,5 +107,43 @@ namespace Seguradora_Pim {
             this.Tela_Anterior.Show();
 
         }
+
+        //instrucoes para evitar que ao entrar na text box, o cursor va para o fim
+        private void MaskedTextBox_Cpf_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                MaskedTextBox_Cpf.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Cnh_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Cnh.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Cep_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Cep.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Estado_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Estado.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Numero_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Numero.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Celular_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Celular.Select(0, 0);
+            });
+        }
     }
 }

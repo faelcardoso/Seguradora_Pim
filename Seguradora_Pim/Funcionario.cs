@@ -8,6 +8,7 @@ using System.Diagnostics;
 
 namespace Seguradora_Pim {
     public class Funcionario {
+
         private string str_conn { get; set; } = "Host=localhost;Username=postgres;Password=postgres;Database=db_seguradora";
 
         //Cadastrar informações do funcionario

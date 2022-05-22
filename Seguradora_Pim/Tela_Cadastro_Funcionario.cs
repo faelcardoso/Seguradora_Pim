@@ -67,7 +67,7 @@ namespace Seguradora_Pim {
             Object valor_genero = Combobox_Genero.SelectedItem;
 
             //Tratando erros especificos
-            if ((valor_genero != null) && (MaskedTextBox_Numero.Text != "") && (MaskedTextBox_Estado.Text != "")) {
+            if ((valor_genero != null) && (MaskedTextBox_Numero.Text != "") && (MaskedTextBox_Estado.Text != "") && (MaskedTextBox_Senha.Text != "") && (MaskedTextBox_Confirmar_Senha.Text != "")) {
                 //Recuperando valores dos textbox
                 string valor_nome = Textbox_Nome.Text;
                 string valor_data_nascimento = DTPicker_Data_Nascimento.Text;
@@ -115,9 +115,10 @@ namespace Seguradora_Pim {
                 MessageBox.Show("Por favor, digite o estado da residência.", "Ops...");
             } else if (MaskedTextBox_Numero.Text == "") {
                 MessageBox.Show("Por favor, digite o numero da residência.", "Ops...");
-            } 
+            } else if ((MaskedTextBox_Senha.Text == "") || (MaskedTextBox_Confirmar_Senha.Text == "")) {
+                MessageBox.Show("Por favor, digite uma senha.", "Ops...");
+            }
 
-            
         }
 
         private void Botao_Voltar_Click(object sender, EventArgs e) {
@@ -128,9 +129,43 @@ namespace Seguradora_Pim {
         private void Tela_Cadastro_Funcionario_Load(object sender, EventArgs e) {
 
         }
+        
+        //instrucoes para evitar que ao entrar na text box, o cursor va para o fim
+        private void MaskedTextBox_Cpf_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                MaskedTextBox_Cpf.Select(0, 0);
+            });
+        }
 
-        private void label1_Click_1(object sender, EventArgs e) {
+        private void MaskedTextBox_Cnh_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Cnh.Select(0, 0);
+            });
+        }
 
+        private void MaskedTextBox_Cep_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Cep.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Estado_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Estado.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Numero_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Numero.Select(0, 0);
+            });
+        }
+
+        private void MaskedTextBox_Celular_Enter(object sender, EventArgs e) {
+            this.BeginInvoke((MethodInvoker)delegate () {
+                MaskedTextBox_Celular.Select(0, 0);
+            });
         }
     }
 }
