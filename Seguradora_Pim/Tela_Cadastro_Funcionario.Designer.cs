@@ -154,7 +154,7 @@
             this.Group_Nome.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Nome.Name = "Group_Nome";
             this.Group_Nome.Size = new System.Drawing.Size(509, 84);
-            this.Group_Nome.TabIndex = 6;
+            this.Group_Nome.TabIndex = 1;
             // 
             // Label_Nome
             // 
@@ -186,7 +186,7 @@
             this.Group_Data_Nascimento.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Data_Nascimento.Name = "Group_Data_Nascimento";
             this.Group_Data_Nascimento.Size = new System.Drawing.Size(509, 84);
-            this.Group_Data_Nascimento.TabIndex = 18;
+            this.Group_Data_Nascimento.TabIndex = 2;
             // 
             // Label_Data_Nascimento
             // 
@@ -209,6 +209,7 @@
             this.DTPicker_Data_Nascimento.Name = "DTPicker_Data_Nascimento";
             this.DTPicker_Data_Nascimento.Size = new System.Drawing.Size(500, 30);
             this.DTPicker_Data_Nascimento.TabIndex = 2;
+            this.DTPicker_Data_Nascimento.UseWaitCursor = true;
             // 
             // Group_Cpf_Cnpj
             // 
@@ -218,7 +219,7 @@
             this.Group_Cpf_Cnpj.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cpf_Cnpj.Name = "Group_Cpf_Cnpj";
             this.Group_Cpf_Cnpj.Size = new System.Drawing.Size(509, 84);
-            this.Group_Cpf_Cnpj.TabIndex = 7;
+            this.Group_Cpf_Cnpj.TabIndex = 3;
             // 
             // Label_Cpf_Cnpj
             // 
@@ -234,13 +235,15 @@
             // 
             // MaskedTextBox_Cpf
             // 
+            this.MaskedTextBox_Cpf.Culture = new System.Globalization.CultureInfo("");
             this.MaskedTextBox_Cpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.MaskedTextBox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaskedTextBox_Cpf.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cpf.Mask = "000.000.000-00";
             this.MaskedTextBox_Cpf.Name = "MaskedTextBox_Cpf";
+            this.MaskedTextBox_Cpf.PromptChar = ' ';
             this.MaskedTextBox_Cpf.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Cpf.TabIndex = 4;
+            this.MaskedTextBox_Cpf.TabIndex = 3;
             this.MaskedTextBox_Cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // Group_Cnh
@@ -251,7 +254,7 @@
             this.Group_Cnh.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cnh.Name = "Group_Cnh";
             this.Group_Cnh.Size = new System.Drawing.Size(509, 84);
-            this.Group_Cnh.TabIndex = 19;
+            this.Group_Cnh.TabIndex = 4;
             // 
             // Label_Cnh
             // 
@@ -271,8 +274,9 @@
             this.MaskedTextBox_Cnh.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cnh.Mask = "00000000000";
             this.MaskedTextBox_Cnh.Name = "MaskedTextBox_Cnh";
+            this.MaskedTextBox_Cnh.PromptChar = ' ';
             this.MaskedTextBox_Cnh.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Cnh.TabIndex = 2;
+            this.MaskedTextBox_Cnh.TabIndex = 4;
             // 
             // Group_Genero
             // 
@@ -282,7 +286,7 @@
             this.Group_Genero.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Genero.Name = "Group_Genero";
             this.Group_Genero.Size = new System.Drawing.Size(509, 84);
-            this.Group_Genero.TabIndex = 8;
+            this.Group_Genero.TabIndex = 5;
             // 
             // Label_Genero
             // 
@@ -316,7 +320,7 @@
             this.Group_Cep.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cep.Name = "Group_Cep";
             this.Group_Cep.Size = new System.Drawing.Size(509, 84);
-            this.Group_Cep.TabIndex = 9;
+            this.Group_Cep.TabIndex = 6;
             // 
             // Label_Cep
             // 
@@ -336,8 +340,9 @@
             this.MaskedTextBox_Cep.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cep.Mask = "00000-000";
             this.MaskedTextBox_Cep.Name = "MaskedTextBox_Cep";
+            this.MaskedTextBox_Cep.PromptChar = ' ';
             this.MaskedTextBox_Cep.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Cep.TabIndex = 2;
+            this.MaskedTextBox_Cep.TabIndex = 6;
             // 
             // Group_Cidade
             // 
@@ -347,7 +352,7 @@
             this.Group_Cidade.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Cidade.Name = "Group_Cidade";
             this.Group_Cidade.Size = new System.Drawing.Size(509, 84);
-            this.Group_Cidade.TabIndex = 10;
+            this.Group_Cidade.TabIndex = 7;
             // 
             // Label_Cidade
             // 
@@ -368,7 +373,7 @@
             this.Textbox_Cidade.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
             this.Textbox_Cidade.Name = "Textbox_Cidade";
             this.Textbox_Cidade.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Cidade.TabIndex = 1;
+            this.Textbox_Cidade.TabIndex = 7;
             // 
             // Group_Estado
             // 
@@ -378,7 +383,7 @@
             this.Group_Estado.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Estado.Name = "Group_Estado";
             this.Group_Estado.Size = new System.Drawing.Size(509, 84);
-            this.Group_Estado.TabIndex = 11;
+            this.Group_Estado.TabIndex = 8;
             // 
             // Label_Estado
             // 
@@ -398,8 +403,9 @@
             this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Estado.Mask = "AA";
             this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
+            this.MaskedTextBox_Estado.PromptChar = ' ';
             this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Estado.TabIndex = 3;
+            this.MaskedTextBox_Estado.TabIndex = 8;
             // 
             // Group_Bairro
             // 
@@ -409,7 +415,7 @@
             this.Group_Bairro.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Bairro.Name = "Group_Bairro";
             this.Group_Bairro.Size = new System.Drawing.Size(509, 84);
-            this.Group_Bairro.TabIndex = 12;
+            this.Group_Bairro.TabIndex = 9;
             // 
             // Label_Bairro
             // 
@@ -430,7 +436,7 @@
             this.Textbox_Bairro.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
             this.Textbox_Bairro.Name = "Textbox_Bairro";
             this.Textbox_Bairro.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Bairro.TabIndex = 1;
+            this.Textbox_Bairro.TabIndex = 9;
             // 
             // Group_Rua
             // 
@@ -440,7 +446,7 @@
             this.Group_Rua.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Rua.Name = "Group_Rua";
             this.Group_Rua.Size = new System.Drawing.Size(509, 84);
-            this.Group_Rua.TabIndex = 13;
+            this.Group_Rua.TabIndex = 10;
             // 
             // Label_Rua
             // 
@@ -461,7 +467,7 @@
             this.Textbox_Rua.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
             this.Textbox_Rua.Name = "Textbox_Rua";
             this.Textbox_Rua.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Rua.TabIndex = 1;
+            this.Textbox_Rua.TabIndex = 10;
             // 
             // Group_Numero
             // 
@@ -471,7 +477,7 @@
             this.Group_Numero.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Numero.Name = "Group_Numero";
             this.Group_Numero.Size = new System.Drawing.Size(509, 84);
-            this.Group_Numero.TabIndex = 14;
+            this.Group_Numero.TabIndex = 11;
             // 
             // Label_Numero
             // 
@@ -491,8 +497,9 @@
             this.MaskedTextBox_Numero.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Numero.Mask = "00000";
             this.MaskedTextBox_Numero.Name = "MaskedTextBox_Numero";
+            this.MaskedTextBox_Numero.PromptChar = ' ';
             this.MaskedTextBox_Numero.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Numero.TabIndex = 3;
+            this.MaskedTextBox_Numero.TabIndex = 11;
             // 
             // Group_Complemento
             // 
@@ -502,7 +509,7 @@
             this.Group_Complemento.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Complemento.Name = "Group_Complemento";
             this.Group_Complemento.Size = new System.Drawing.Size(509, 84);
-            this.Group_Complemento.TabIndex = 15;
+            this.Group_Complemento.TabIndex = 12;
             // 
             // Label_Complemento
             // 
@@ -523,7 +530,7 @@
             this.Textbox_Complemento.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
             this.Textbox_Complemento.Name = "Textbox_Complemento";
             this.Textbox_Complemento.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Complemento.TabIndex = 1;
+            this.Textbox_Complemento.TabIndex = 12;
             // 
             // Group_Celular
             // 
@@ -533,7 +540,7 @@
             this.Group_Celular.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Celular.Name = "Group_Celular";
             this.Group_Celular.Size = new System.Drawing.Size(509, 84);
-            this.Group_Celular.TabIndex = 16;
+            this.Group_Celular.TabIndex = 13;
             // 
             // Label_Celular
             // 
@@ -553,8 +560,9 @@
             this.MaskedTextBox_Celular.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Celular.Mask = "(00) 00000-0000";
             this.MaskedTextBox_Celular.Name = "MaskedTextBox_Celular";
+            this.MaskedTextBox_Celular.PromptChar = ' ';
             this.MaskedTextBox_Celular.Size = new System.Drawing.Size(500, 31);
-            this.MaskedTextBox_Celular.TabIndex = 2;
+            this.MaskedTextBox_Celular.TabIndex = 13;
             // 
             // Group_Email
             // 
@@ -564,7 +572,7 @@
             this.Group_Email.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Email.Name = "Group_Email";
             this.Group_Email.Size = new System.Drawing.Size(509, 84);
-            this.Group_Email.TabIndex = 17;
+            this.Group_Email.TabIndex = 14;
             // 
             // Label_Email
             // 
@@ -585,7 +593,7 @@
             this.Textbox_Email.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
             this.Textbox_Email.Name = "Textbox_Email";
             this.Textbox_Email.Size = new System.Drawing.Size(500, 30);
-            this.Textbox_Email.TabIndex = 1;
+            this.Textbox_Email.TabIndex = 14;
             // 
             // Group_Senha
             // 
@@ -595,7 +603,7 @@
             this.Group_Senha.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Group_Senha.Name = "Group_Senha";
             this.Group_Senha.Size = new System.Drawing.Size(509, 84);
-            this.Group_Senha.TabIndex = 20;
+            this.Group_Senha.TabIndex = 15;
             // 
             // Label_Senha
             // 
@@ -617,8 +625,9 @@
             this.MaskedTextBox_Senha.Margin = new System.Windows.Forms.Padding(0);
             this.MaskedTextBox_Senha.Name = "MaskedTextBox_Senha";
             this.MaskedTextBox_Senha.PasswordChar = '*';
+            this.MaskedTextBox_Senha.PromptChar = ' ';
             this.MaskedTextBox_Senha.Size = new System.Drawing.Size(500, 28);
-            this.MaskedTextBox_Senha.TabIndex = 1;
+            this.MaskedTextBox_Senha.TabIndex = 15;
             this.MaskedTextBox_Senha.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // flowLayoutPanel2
@@ -629,7 +638,7 @@
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(509, 84);
-            this.flowLayoutPanel2.TabIndex = 21;
+            this.flowLayoutPanel2.TabIndex = 16;
             // 
             // label1
             // 
@@ -650,10 +659,10 @@
             this.MaskedTextBox_Confirmar_Senha.Margin = new System.Windows.Forms.Padding(0);
             this.MaskedTextBox_Confirmar_Senha.Name = "MaskedTextBox_Confirmar_Senha";
             this.MaskedTextBox_Confirmar_Senha.PasswordChar = '*';
+            this.MaskedTextBox_Confirmar_Senha.PromptChar = ' ';
             this.MaskedTextBox_Confirmar_Senha.Size = new System.Drawing.Size(500, 28);
-            this.MaskedTextBox_Confirmar_Senha.TabIndex = 1;
+            this.MaskedTextBox_Confirmar_Senha.TabIndex = 16;
             this.MaskedTextBox_Confirmar_Senha.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskedTextBox_Confirmar_Senha.UseSystemPasswordChar = true;
             // 
             // Botao_Voltar
             // 
@@ -669,7 +678,7 @@
             this.Botao_Voltar.Margin = new System.Windows.Forms.Padding(8, 16, 1133, 0);
             this.Botao_Voltar.Name = "Botao_Voltar";
             this.Botao_Voltar.Size = new System.Drawing.Size(200, 48);
-            this.Botao_Voltar.TabIndex = 10;
+            this.Botao_Voltar.TabIndex = 18;
             this.Botao_Voltar.Text = "Voltar";
             this.Botao_Voltar.UseVisualStyleBackColor = false;
             this.Botao_Voltar.Click += new System.EventHandler(this.Botao_Voltar_Click);
@@ -688,7 +697,7 @@
             this.Botao_Cadastrar.Margin = new System.Windows.Forms.Padding(0, 16, 0, 0);
             this.Botao_Cadastrar.Name = "Botao_Cadastrar";
             this.Botao_Cadastrar.Size = new System.Drawing.Size(200, 48);
-            this.Botao_Cadastrar.TabIndex = 11;
+            this.Botao_Cadastrar.TabIndex = 17;
             this.Botao_Cadastrar.Text = "Cadastrar";
             this.Botao_Cadastrar.UseVisualStyleBackColor = false;
             this.Botao_Cadastrar.Click += new System.EventHandler(this.Botao_Cadastrar_Click);

@@ -75,9 +75,13 @@ namespace Seguradora_Pim {
                         MaskedTextBox_Cpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                         string cpf_funcionario = MaskedTextBox_Cpf.Text;
                         string resultado_deletar_funcionario = obj_funcionario.deletar_funcionario(cpf_funcionario);
-                        MessageBox.Show(resultado_deletar_funcionario, "Ok!");
-                        this.Tela_Anterior.Show();
-                        this.Close();
+                        if (resultado_deletar_funcionario == "0") {
+                            MessageBox.Show("Funcionário não econtrado, tente novamente.", "Ops...");
+                        } else {
+                            MessageBox.Show(resultado_deletar_funcionario, "Ok!");
+                            this.Tela_Anterior.Show();
+                            this.Close();
+                        }
                     }
                     break;
                 default:

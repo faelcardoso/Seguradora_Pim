@@ -89,14 +89,21 @@
             // 
             // MaskedTextBox_Cpf
             // 
+            this.MaskedTextBox_Cpf.AccessibleDescription = "";
+            this.MaskedTextBox_Cpf.AccessibleName = "";
+            this.MaskedTextBox_Cpf.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.MaskedTextBox_Cpf.Culture = new System.Globalization.CultureInfo("");
             this.MaskedTextBox_Cpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.MaskedTextBox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaskedTextBox_Cpf.HidePromptOnLeave = true;
+            this.MaskedTextBox_Cpf.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
             this.MaskedTextBox_Cpf.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cpf.Mask = "000.000.000-00";
             this.MaskedTextBox_Cpf.Name = "MaskedTextBox_Cpf";
+            this.MaskedTextBox_Cpf.PromptChar = ' ';
             this.MaskedTextBox_Cpf.Size = new System.Drawing.Size(500, 30);
             this.MaskedTextBox_Cpf.TabIndex = 1;
+            this.MaskedTextBox_Cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.MaskedTextBox_Cpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // Botao_Cancelar

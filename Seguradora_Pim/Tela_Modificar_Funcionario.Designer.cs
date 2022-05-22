@@ -222,11 +222,13 @@
             // 
             // MaskedTextBox_Cpf
             // 
+            this.MaskedTextBox_Cpf.Culture = new System.Globalization.CultureInfo("");
             this.MaskedTextBox_Cpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.MaskedTextBox_Cpf.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaskedTextBox_Cpf.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cpf.Mask = "000.000.000-00";
             this.MaskedTextBox_Cpf.Name = "MaskedTextBox_Cpf";
+            this.MaskedTextBox_Cpf.PromptChar = ' ';
             this.MaskedTextBox_Cpf.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Cpf.TabIndex = 3;
             this.MaskedTextBox_Cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -259,6 +261,7 @@
             this.MaskedTextBox_Cnh.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cnh.Mask = "00000000000";
             this.MaskedTextBox_Cnh.Name = "MaskedTextBox_Cnh";
+            this.MaskedTextBox_Cnh.PromptChar = ' ';
             this.MaskedTextBox_Cnh.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Cnh.TabIndex = 1;
             // 
@@ -324,6 +327,7 @@
             this.MaskedTextBox_Cep.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Cep.Mask = "00000-000";
             this.MaskedTextBox_Cep.Name = "MaskedTextBox_Cep";
+            this.MaskedTextBox_Cep.PromptChar = ' ';
             this.MaskedTextBox_Cep.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Cep.TabIndex = 1;
             // 
@@ -386,6 +390,7 @@
             this.MaskedTextBox_Estado.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Estado.Mask = "AA";
             this.MaskedTextBox_Estado.Name = "MaskedTextBox_Estado";
+            this.MaskedTextBox_Estado.PromptChar = ' ';
             this.MaskedTextBox_Estado.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Estado.TabIndex = 2;
             // 
@@ -479,6 +484,7 @@
             this.MaskedTextBox_Numero.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Numero.Mask = "00000";
             this.MaskedTextBox_Numero.Name = "MaskedTextBox_Numero";
+            this.MaskedTextBox_Numero.PromptChar = ' ';
             this.MaskedTextBox_Numero.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Numero.TabIndex = 2;
             // 
@@ -541,6 +547,7 @@
             this.MaskedTextBox_Celular.Location = new System.Drawing.Point(3, 34);
             this.MaskedTextBox_Celular.Mask = "(00) 00000-0000";
             this.MaskedTextBox_Celular.Name = "MaskedTextBox_Celular";
+            this.MaskedTextBox_Celular.PromptChar = ' ';
             this.MaskedTextBox_Celular.Size = new System.Drawing.Size(500, 31);
             this.MaskedTextBox_Celular.TabIndex = 1;
             // 

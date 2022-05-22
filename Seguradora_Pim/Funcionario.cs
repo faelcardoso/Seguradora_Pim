@@ -217,7 +217,7 @@ namespace Seguradora_Pim {
 
         public string deletar_funcionario (string cpf_cnpj) {
             //Variavel de retorno
-            string mensagem_resposta = "Funcionário deletado com sucesso!";
+            string mensagem_resposta = "Funcionário removido com sucesso!";
             //String query inserir Pessoa
             string str_cmd_modificar_pessoa =
             "DELETE FROM " +
@@ -235,7 +235,7 @@ namespace Seguradora_Pim {
 
             //Verificando se alteração foi feita em somente UMA linha
             if (cmd_deletar_funcionario_res != 1) {
-                mensagem_resposta = "Usuário não foi deletado.";
+                mensagem_resposta = "0";
                 conn.Close();
                 return mensagem_resposta;
             }

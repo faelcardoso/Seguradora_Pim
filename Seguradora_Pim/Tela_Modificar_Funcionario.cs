@@ -39,21 +39,30 @@ namespace Seguradora_Pim {
         private void Tela_Modificar_Funcionario_Load(object sender, EventArgs e) {
             Funcionario obj_funcionario = new Funcionario();
             Dictionary<string, string> dados_funcionario = obj_funcionario.listar_funcionario(this.Cpf_Funcionario);
-            //Preenchendo campos com os valores do banco
-            Textbox_Nome.Text = dados_funcionario["nome"].ToString();
-            DTPicker_Data_Nascimento.Text = dados_funcionario["data_nascimento"].ToString();
-            MaskedTextBox_Cpf.Text = dados_funcionario["cpf_cnpj"].ToString();
-            MaskedTextBox_Cnh.Text = dados_funcionario["cnh"].ToString();
-            Combobox_Genero.SelectedItem = dados_funcionario["genero"].ToString();
-            MaskedTextBox_Cep.Text = dados_funcionario["cep"].ToString();
-            Textbox_Cidade.Text = dados_funcionario["cidade"].ToString();
-            MaskedTextBox_Estado.Text = dados_funcionario["estado"].ToString();
-            Textbox_Bairro.Text = dados_funcionario["bairro"].ToString();
-            Textbox_Rua.Text = dados_funcionario["rua"].ToString();
-            MaskedTextBox_Numero.Text = dados_funcionario["numero"].ToString();
-            Textbox_Complemento.Text = dados_funcionario["complemento"].ToString();
-            MaskedTextBox_Celular.Text = dados_funcionario["celular"].ToString();
-            Textbox_Email.Text = dados_funcionario["email"].ToString();
+            //Verificando se existe a coluna nome, se nao existir é por que nao encontrou o CPF digitado
+            if (dados_funcionario.ContainsKey("nome")) {
+                //Preenchendo campos com os valores do banco
+                Textbox_Nome.Text = dados_funcionario["nome"].ToString();
+                DTPicker_Data_Nascimento.Text = dados_funcionario["data_nascimento"].ToString();
+                MaskedTextBox_Cpf.Text = dados_funcionario["cpf_cnpj"].ToString();
+                MaskedTextBox_Cnh.Text = dados_funcionario["cnh"].ToString();
+                Combobox_Genero.SelectedItem = dados_funcionario["genero"].ToString();
+                MaskedTextBox_Cep.Text = dados_funcionario["cep"].ToString();
+                Textbox_Cidade.Text = dados_funcionario["cidade"].ToString();
+                MaskedTextBox_Estado.Text = dados_funcionario["estado"].ToString();
+                Textbox_Bairro.Text = dados_funcionario["bairro"].ToString();
+                Textbox_Rua.Text = dados_funcionario["rua"].ToString();
+                MaskedTextBox_Numero.Text = dados_funcionario["numero"].ToString();
+                Textbox_Complemento.Text = dados_funcionario["complemento"].ToString();
+                MaskedTextBox_Celular.Text = dados_funcionario["celular"].ToString();
+                Textbox_Email.Text = dados_funcionario["email"].ToString();
+            } else {
+                //Nao encontrou volta a tela...
+                MessageBox.Show("Funcionário não encontrado, tente novamente.", "Ops...");
+                this.Close();
+                this.Tela_Anterior.Show();
+            }
+            
         }
 
         private void Botao_Voltar_Click(object sender, EventArgs e) {
@@ -92,7 +101,7 @@ namespace Seguradora_Pim {
             Funcionario obj_funcionario = new Funcionario();
             string resultado_modificar_funcionario = obj_funcionario.modificar_funcionario(valor_nome, valor_cpf_cnpj, valor_cnh, valor_genero, valor_data_nascimento, valor_cep, valor_estado, valor_cidade, valor_bairro, valor_rua, valor_numero, valor_complemento, valor_celular, valor_email);
 
-            System.Windows.Forms.MessageBox.Show(resultado_modificar_funcionario);
+            MessageBox.Show(resultado_modificar_funcionario, "Ok!");
 
             this.Close();
             this.Tela_Anterior.Show();
